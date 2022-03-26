@@ -378,6 +378,7 @@ export let MUITheme = createTheme({
     fontStyle: "normal",
     letterSpacing: 0,
     fontSize: 14,
+    color:"black",
     h1: {
       position: "absolute",
       color: "#FF740F",

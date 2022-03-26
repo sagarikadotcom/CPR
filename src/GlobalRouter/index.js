@@ -14,10 +14,10 @@ class GlobalRouter extends Component {
         <Suspense fallback={<LinearProgress />}>
           <Routes>
             {Object.values(routes).map((route) => {
-       
+     
               return <Route key={route.name} path={route.path} exact component={route.component} />;
             })}
-            <Route component={() => <PageNotFound homePath="/" />} />
+        
           </Routes>
            {this.props.isLoggedIn && <Footer />}
         </Suspense>
