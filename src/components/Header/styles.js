@@ -2,8 +2,8 @@ export const useStyles = (MUITheme) => ({
     appBarRoot: {
       height: 110,
       padding: "1.714rem",
-      backgroundColor: "inherit",
-      background: "transparent linear-gradient(178deg, #01b7ff 0%, #00000000 100%) 0% 0% no-repeat padding-box",
+     
+      background: "white",
       [MUITheme.breakpoints.only("xs")]: {
         padding: 12,
         height: "66px",
@@ -12,8 +12,9 @@ export const useStyles = (MUITheme) => ({
     triggeredRoot: {
       height: 100,
       padding: "1.714rem",
-      background: "#FFFFFF 0% 0% no-repeat padding-box;",
+      background: "#01b7ff  0% 0% no-repeat padding-box;",
       boxShadow: "0px 3px 6px #00000029",
+      color:"black",
       opacity: 1,
       [MUITheme.breakpoints.only("sm")]: {
         height: 96,
@@ -52,8 +53,8 @@ export const useStyles = (MUITheme) => ({
       width: 400,
       height: 100,
       [MUITheme.breakpoints.only("xs")]: {
-        width: 100,
-        height: 15,
+        width: 140,
+        height: 50,
       },
     },
     userBtn: {
@@ -92,7 +93,37 @@ export const useStyles = (MUITheme) => ({
       justifyContent: "space-evenly"
     },
     btn:{
-fontSize:21
+color:"black",
+fontWeight:700,
+fontSize:21,
+
+[MUITheme.breakpoints.only("sm")]: {
+  fontSize:21,
+  fontWeight:700
+},
+[MUITheme.breakpoints.down("sm")]: {
+  fontSize:16,
+},
+[MUITheme.breakpoints.only("xs")]: {
+  fontSize:16,
+},
+    },
+    hoverBtn:{
+      
+color:"white",
+fontWeight:700,
+fontSize:21,
+
+[MUITheme.breakpoints.only("sm")]: {
+  fontSize:21,
+  fontWeight:700
+},
+[MUITheme.breakpoints.down("sm")]: {
+  fontSize:16,
+},
+[MUITheme.breakpoints.only("xs")]: {
+  fontSize:16,
+},
     }
   });
   

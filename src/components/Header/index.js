@@ -31,38 +31,38 @@ const OfflineHeader = (props) => {
             onClick={props.scrollToTop}
           />
           <div className={props.classes.buttonsDiv}>
+          <Hidden only={"xs"}>
               <Button
-                className={props.classes.btn}
+                className={props.trigger ?props.classes.hoverBtn:props.classes.btn}
                 onClick={handleLogoClick}
               >
                 HOME
               </Button>
               <Button
-                 className={props.classes.btn}
+                 className={props.trigger ?props.classes.hoverBtn:props.classes.btn}
                 onClick={props.scrollToArtist}
               >
                 SERVICES
               </Button>
               <Button
-               className={props.classes.btn}
+                 className={props.trigger ?props.classes.hoverBtn:props.classes.btn}
               
               >
                ABOUT US
               </Button>
               <Button
-                 className={props.classes.btn}
+                 className={props.trigger ?props.classes.hoverBtn:props.classes.btn}
              
               >
               CONTACT US
               </Button>
+              </Hidden>
               <Button
-                  className={props.classes.btn}
+                 className={props.trigger ?props.classes.hoverBtn:props.classes.btn}
              
               >
-                <FiPhoneCall style={{marginRight:10}}/>
+                              <FiPhoneCall style={{marginRight:10}}/>
                 +91 8722804740
-
-
               </Button>
           </div>
         </div>

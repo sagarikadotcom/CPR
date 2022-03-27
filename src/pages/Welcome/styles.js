@@ -400,5 +400,12 @@ export const useStyles = () => ({
   divider: {
     marginTop: -1,
   },
+  paper:{
+    height:700,
+
+    [MUITheme.breakpoints.only("xs")]: {
+     height:200
+    },
+  }
 
 });

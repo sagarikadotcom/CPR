@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
 import Toolbar from "@material-ui/core/Toolbar";
 import { withStyles } from "@material-ui/styles";
-import { Button, Card, Grid, Hidden, Paper } from "@material-ui/core";
+import { Button, Card, Grid, Hidden, Paper, useScrollTrigger } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Carousel from 'react-material-ui-carousel'
@@ -33,8 +33,19 @@ import Services from './Services'
 import Contactus from './Contactus'
 import Footer from "./Footer"
 import { Facebook, Instagram, YouTube } from "@mui/icons-material";
-
+import Aboutus from './Aboutus'
 const Welcome = (props) => {
+
+  const homeRef = useRef(null);
+  const serviceRef = useRef(null);
+  const aboutUsRef = useRef(null);
+  const contactUsRef=useRef(null)
+  let trigger = useScrollTrigger({ disableHysteresis: true });
+
+  const scrollToHome = () => homeRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToServices = () => serviceRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToAboutUs = () => aboutUsRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToContactUs = () => contactUsRef.current.scrollIntoView({ behavior: "smooth" });
 
   let items = [
    Banner,Banner1,Banner2
@@ -43,7 +54,7 @@ const Welcome = (props) => {
 const   Item=(props)=>
 {
     return (
-        <Paper style={{height:700}}>
+        <Paper className={props.props.classes.paper}>
            <img src={props.item} style={{width:"100%"}}/>
                   </Paper>
     )
@@ -51,19 +62,28 @@ const   Item=(props)=>
   return (
     <>
     
-    <Header/>
+    <Header trigger={trigger}/>
         <Carousel indicators={false}>
             {
-                items.map( (item, i) => <Item key={i} item={item} /> )
+                items.map( (item, i) => <Item key={i} item={item} props={props} /> )
             }
         </Carousel>
        <div style={{margin:"auto", display:"flex", justifyContent:"center"}}>
-         <img src ={snippet}/>
+         <img src ={snippet} style={{max_width:1289}}/>
        </div>
-         <Grid container style={{display:"flex", justifyContent:"center",background: "transparent linear-gradient(180deg, #11b3f229 0%, #00000000 100%) 0% 0% no-repeat padding-box",padding:100}}>
+       <div style={{background: "transparent linear-gradient(180deg, #11b3f229 0%, #00000000 100%) 0% 0% no-repeat padding-box"}}>
+
+         <Grid container style={{display:"flex", justifyContent:"center",maxWidth:1298, margin:"auto", padding:50}}>
            <Description style={{display:"flex", justifyContent:"center",}}/>
-           <Services/>
+         
          </Grid>
+         <Grid container style={{display:"flex", justifyContent:"center",maxWidth:1298, margin:"auto", padding:50}}>
+            <Services/>
+         </Grid>
+         {/* <Grid container style={{display:"flex", justifyContent:"center",maxWidth:1298, margin:"auto", padding:50}}>
+            <Aboutus/>
+         </Grid> */}
+         </div>
               <Contactus/>
          <div style={{height:150, background:"black", display:"grid", justifyContent:"center", alignItems:"center", color:"white"}}>
  {/*  <div style={{display:"flex", justifyContent:"space-evenly", padding:"3px 0px"}}>
@@ -77,4 +97,4 @@ const   Item=(props)=>
   );
 };
 
-export default Welcome;
+export default withStyles(useStyles)(Welcome)
