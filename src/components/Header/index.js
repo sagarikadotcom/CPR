@@ -44,12 +44,12 @@ const OfflineHeader = (props) => {
               >
                 SERVICES
               </Button>
-              <Button
+             {/*  <Button
                  className={props.trigger ?props.classes.hoverBtn:props.classes.btn}
               
               >
                ABOUT US
-              </Button>
+              </Button> */}
               <Button
                  className={props.trigger ?props.classes.hoverBtn:props.classes.btn}
              
@@ -61,7 +61,7 @@ const OfflineHeader = (props) => {
                  className={props.trigger ?props.classes.hoverBtn:props.classes.btn}
                            >
                              <FiPhoneCall style={{marginRight:10}}/>
-                +91 8722804740
+                +91 8951133804
               </Button>
           </div>
         </div>
