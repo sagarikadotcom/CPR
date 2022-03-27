@@ -45,6 +45,21 @@ const Footer = (props) => {
     const handleBehavior=()=>{
         navigate(GlobalRoutes.BEHAVIOR.path);
     }
+
+    const handleFb=()=>{
+      const url = "https://www.facebook.com/petzservices/"
+      window.open(url, "_blank");
+    }
+    const handleInsta=()=>{
+      const url = "https://instagram.com/canaanpetresort?utm_medium=copy_link"
+      window.open(url, "_blank");
+    }
+    const handleYt=()=>{
+      const url = "https://youtube.com/channel/UCCCsSEZ5fFPwWjVuWqy6i6Q"
+      window.open(url, "_blank");
+    }
+
+
   return (
   <>
   <div style={{display:"flex",marginTop:100,padding:"10px 0px", boxShadow:"0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%)" }}>
@@ -55,36 +70,36 @@ const Footer = (props) => {
 <Grid item sm={3} >
   <Typography style={{color:"#0000007a", fontSize:30, fontWeight:600}}>COMPANY</Typography>
   <div style={{display:"grid", justifyContent:"flex-start", marginTop:10}}>
-  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px"}}>ABOUT US</Typography>
-  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px"}}>MEDIA KIT</Typography>
-  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px"}}>NEWSLETTER</Typography>
+  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px",cursor:"pointer"}}>ABOUT US</Typography>
+  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px",cursor:"pointer"}}>MEDIA KIT</Typography>
+  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px",cursor:"pointer"}}>NEWSLETTER</Typography>
   </div>
 </Grid>
 <Grid item sm={3} >
   <Typography style={{color:"#0000007a", fontSize:30, fontWeight:600}}>SERVICES</Typography>
   <div style={{display:"grid", justifyContent:"flex-start", marginTop:10}}>
-  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px"}} onClick={handleBoarding}>BOARDING</Typography>
-  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px"}}onClick={handleGrooming}>GROOMING</Typography>
-  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px"}}onClick={handleSwimming}>SWIMMING</Typography>
-  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px"}}onClick={handleTraining}>TRAINING</Typography>
-  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px"}}onClick={handlePickup}>PICK AND DROP</Typography>
+  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px",cursor:"pointer"}} onClick={handleBoarding}>BOARDING</Typography>
+  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px",cursor:"pointer"}}onClick={handleGrooming}>GROOMING</Typography>
+  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px",cursor:"pointer"}}onClick={handleSwimming}>SWIMMING</Typography>
+  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px",cursor:"pointer"}}onClick={handleTraining}>TRAINING</Typography>
+  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px",cursor:"pointer"}}onClick={handlePickup}>PICK AND DROP</Typography>
 
   </div>
 </Grid>
 <Grid item sm={3} >
   <Typography style={{color:"#0000007a", fontSize:30, fontWeight:600}}>SUPPORT</Typography>
   <div style={{display:"grid", justifyContent:"flex-start", marginTop:10}}>
-  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px"}}>HELP CENTER</Typography>
-  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px"}}>CONTACT US</Typography>
-  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px"}}>LOCATION</Typography>
+  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px",cursor:"pointer"}}>HELP CENTER</Typography>
+  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px",cursor:"pointer"}}>CONTACT US</Typography>
+  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px",cursor:"pointer"}}>LOCATION</Typography>
   </div>
 </Grid>
 <Grid item sm={3} >
   <Typography style={{color:"#0000007a", fontSize:30, fontWeight:600}}>COMMUNITY</Typography>
   <div style={{display:"grid", justifyContent:"flex-start", marginTop:10}}>
-  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px"}}>FACEBOOK<AiFillFacebook/> </Typography>
-  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px"}}><BsInstagram/>INSTAGRAM</Typography>
-  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px"}}>YOUTUBE</Typography>
+  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px", cursor:"pointer"}} onClick={handleFb}>FACEBOOK </Typography>
+  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px",cursor:"pointer"}} onClick={handleInsta}>INSTAGRAM</Typography>
+  <Typography  style={{color:"#0000007a", fontSize:18, fontWeight:500, margin:"5px 0px",cursor:"pointer"}} onClick={handleYt}>YOUTUBE</Typography>
   </div>
 </Grid>
 

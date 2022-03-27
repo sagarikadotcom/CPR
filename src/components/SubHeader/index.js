@@ -20,6 +20,18 @@ const SubHeader = (props) => {
         navigate(GlobalRoutes.WELCOME.path);
     }
 
+    const handleFb=()=>{
+      const url = "https://www.facebook.com/petzservices/"
+      window.open(url, "_blank");
+    }
+    const handleInsta=()=>{
+      const url = "https://instagram.com/canaanpetresort?utm_medium=copy_link"
+      window.open(url, "_blank");
+    }
+    const handleYt=()=>{
+      const url = "https://youtube.com/channel/UCCCsSEZ5fFPwWjVuWqy6i6Q"
+      window.open(url, "_blank");
+    }
   return (
     <AppBar
       classes={{ root: props.trigger ? props.classes.triggeredRoot : props.classes.appBarRoot }}
@@ -34,10 +46,10 @@ const SubHeader = (props) => {
             onClick={handleLogoClick}
           />
           <div className={props.classes.buttonsDiv}>
-    <img src={Facebo0ok}/>
-    <img src={Insta}/>
-    <img src={Youtube}/>
-    <span style={{display:"flex"}}> <img src={Call}/><div><Typography style={{fontSize:"1rem", fontWeight:600}}>+91 8951133804</Typography><Typography  style={{fontSize:"1rem", fontWeight:600}}>+91 8722804740
+    <img src={Facebo0ok} onClick={handleFb}/>
+    <img src={Insta} onClick={handleInsta}/>
+    <img src={Youtube} onClick={handleYt}/>
+    <span style={{display:"flex", cursor:"none"}}> <img src={Call}/><div><Typography style={{fontSize:"1rem", fontWeight:600}}>+91 8951133804</Typography><Typography  style={{fontSize:"1rem", fontWeight:600}}>+91 8722804740
 </Typography></div> </span>
           </div>
         </div>

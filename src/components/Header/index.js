@@ -57,11 +57,10 @@ const OfflineHeader = (props) => {
               CONTACT US
               </Button>
               </Hidden>
-              <Button
+              <Button style={{cursor:"none"}}
                  className={props.trigger ?props.classes.hoverBtn:props.classes.btn}
-             
-              >
-                              <FiPhoneCall style={{marginRight:10}}/>
+                           >
+                             <FiPhoneCall style={{marginRight:10}}/>
                 +91 8722804740
               </Button>
           </div>
