@@ -31,6 +31,9 @@ import snippet from '../../assets/images/snippet.PNG'
 import Description from './Description'
 import Services from './Services'
 import Contactus from './Contactus'
+import Footer from "./Footer"
+import { Facebook, Instagram, YouTube } from "@mui/icons-material";
+
 const Welcome = (props) => {
 
   let items = [
@@ -47,7 +50,7 @@ const   Item=(props)=>
 }
   return (
     <>
-      <CssBaseline />
+    
     <Header/>
         <Carousel indicators={false}>
             {
@@ -57,14 +60,21 @@ const   Item=(props)=>
        <div style={{margin:"auto", display:"flex", justifyContent:"center"}}>
          <img src ={snippet}/>
        </div>
-         <Grid container style={{display:"flex", justifyContent:"center",background: "transparent linear-gradient(180deg, #000000 0%, #00000000 100%) 0% 0% no-repeat padding-box",padding:100}}>
+         <Grid container style={{display:"flex", justifyContent:"center",background: "transparent linear-gradient(180deg, #11b3f229 0%, #00000000 100%) 0% 0% no-repeat padding-box",padding:100}}>
            <Description style={{display:"flex", justifyContent:"center",}}/>
+           <Services/>
          </Grid>
-         <Services/>
-         <Contactus/>
-
+              <Contactus/>
+         <div style={{height:150, background:"black", display:"grid", justifyContent:"center", alignItems:"center", color:"white"}}>
+ {/*  <div style={{display:"flex", justifyContent:"space-evenly", padding:"3px 0px"}}>
+    <Facebook />
+    <Instagram/>
+    <YouTube/>
+  </div> */}
+  <Typography>©{new Date().getFullYear()} Canaan Pet Resort is a unit of Canaan Pet Ventures Pvt. Ltd. All Rights Reserved</Typography>
+</div>
 </>
   );
 };
 
-export default withStyles(useStyles)(Welcome);
+export default Welcome;

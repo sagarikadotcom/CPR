@@ -399,7 +399,6 @@ export const useStyles = () => ({
   },
   divider: {
     marginTop: -1,
-   
   },
 
 });

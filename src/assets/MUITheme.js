@@ -377,7 +377,7 @@ export let MUITheme = createTheme({
     fontFamily: "poppins",
     fontStyle: "normal",
     letterSpacing: 0,
-    fontSize: 14,
+    fontSize: 16,
     color:"black",
     h1: {
       position: "absolute",

@@ -6,10 +6,17 @@ import { Button, Hidden, Toolbar } from "@material-ui/core";
 import { useStyles } from "./styles";
 import LogoDarkBig from "../../assets/images/logos/header-logo.png";
 import LogoLightBig from "../../assets/images/logos/header-logo.png";
+import {  useNavigate  } from "react-router-dom";
 
 import {FiPhoneCall} from 'react-icons/fi'
-const OfflineHeader = (props) => {
+import { GlobalRoutes } from "../../GlobalRouter/Routes";
 
+const OfflineHeader = (props) => {
+  const navigate = useNavigate();
+ 
+  const handleLogoClick=()=>{
+    navigate.push(GlobalRoutes.WELCOME.path);
+}
   return (
     <AppBar
       classes={{ root: props.trigger ? props.classes.triggeredRoot : props.classes.appBarRoot }}
@@ -26,7 +33,7 @@ const OfflineHeader = (props) => {
           <div className={props.classes.buttonsDiv}>
               <Button
                 className={props.classes.btn}
-                onClick={props.scrollToFan}
+                onClick={handleLogoClick}
               >
                 HOME
               </Button>
@@ -53,7 +60,8 @@ const OfflineHeader = (props) => {
              
               >
                 <FiPhoneCall style={{marginRight:10}}/>
-               9886244931
+                +91 8722804740
+
 
               </Button>
           </div>

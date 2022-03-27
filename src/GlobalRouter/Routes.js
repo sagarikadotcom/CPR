@@ -2,10 +2,44 @@ import { lazy } from "react";
 
 
 const Welcome = lazy(() => import("../pages/Welcome"));
+const Boarding = lazy(() => import("../pages/Boarding"));
+const Training = lazy(() => import("../pages/Training"));
+const Grooming = lazy(() => import("../pages/Grooming"));
+const Swimming = lazy(() => import("../pages/Swimming"));
+const Pickup = lazy(() => import("../pages/Pickup"));
+const Behavior = lazy(() => import("../pages/Behavior"));
+
+
+
+
+
+
 
 const WelcomeComponent = Welcome;
+const BoardingComponent= Boarding
+const TrainingComponent= Training
+const GroomingComponent= Grooming
+const SwimmingComponent= Swimming
+const PickupComponent= Pickup
+const BehaviourComponent= Behavior
 
-const WELCOME_PATH = "/welcome";
+
+
+
+
+
+
+const BOARDING_PATH = "/boarding";
+const TARINING_path = "/training";
+const GROOMING_PATH = "/grooming";
+const SWIMMING_PATH = "/swimming";
+const PICKUP_PATH = "/transport";
+const BEHAVIOR_PATH = "/behavior";
+
+
+
+
+
 
 export const GlobalRoutes = {
   WELCOME: {
@@ -14,15 +48,51 @@ export const GlobalRoutes = {
     exact: true,
     component: WelcomeComponent,
   },
+  BOARDING: {
+    name: "Boarding",
+    path: BOARDING_PATH,
+    exact: true,
+    component: BoardingComponent,
+  },
+  TRAINING: {
+    name: "Training",
+    path: TARINING_path,
+    exact: true,
+    component: TrainingComponent,
+  },
+  GROOMING: {
+    name: "Grooming",
+    path: GROOMING_PATH,
+    exact: true,
+    component: GroomingComponent,
+  },
+  SWIMMING: {
+    name: "Swimming",
+    path: SWIMMING_PATH,
+    exact: true,
+    component: SwimmingComponent,
+  },
+  PICKUP: {
+    name: "Pickup and Drop",
+    path: PICKUP_PATH,
+    exact: true,
+    component: PickupComponent,
+  },
+  BEHAVIOR: {
+    name: "Behavior",
+    path: BEHAVIOR_PATH,
+    exact: true,
+    component: BehaviourComponent,
+  },
 };
 
 export const setupRouteAuthentications = (isLoggedIn) => {
   return {
     ...GlobalRoutes,
-    ARTIST_GET_STARTED: {
-      ...GlobalRoutes.ARTIST_GET_STARTED,
-      isAllowed: isLoggedIn,
-      redirectTo: GlobalRoutes.SIGNIN.path,
+    WELCOME: {
+      ...GlobalRoutes.WELCOME,
+    
+      redirectTo: GlobalRoutes.WELCOME.path,
     },
   };
 };

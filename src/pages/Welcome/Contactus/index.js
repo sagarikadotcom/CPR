@@ -22,13 +22,13 @@ const Contactus = (props) => {
 
   return (
   <>
-   <Grid container spacing ={4} style={{margin:"50px auto", display:"flex", justifyContent:"center", width:"80%", }}>
+   <Grid container spacing ={4} style={{margin:"10px auto", display:"flex", justifyContent:"center", width:"80%", }}>
      <h1 style={{color:"black"}}>We are Located at</h1>
      
      </Grid>
  
    <div style={{width:"100%"}}>
-       <iframe src="https://www.google.com/maps/d/embed?mid=1xl1fPbEXygJT_jlIdRX4aCOVBRJVLqJj&ehbc=2E312F" width="100%" height="480"></iframe>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15545.499877250826!2d77.6683694!3d13.0754058!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa310a7b7921c7e56!2sCanaan%20Pet%20Resort.%20(Cpr%201)!5e0!3m2!1sen!2sin!4v1648294753891!5m2!1sen!2sin" width="100%" height="500" frameBorder="0"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
          </div>
 </>
   );
