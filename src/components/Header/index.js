@@ -15,7 +15,7 @@ const OfflineHeader = (props) => {
   const navigate = useNavigate();
  
   const handleLogoClick=()=>{
-    navigate.push(GlobalRoutes.WELCOME.path);
+    navigate(GlobalRoutes.WELCOME.path);
 }
   return (
     <AppBar
@@ -28,7 +28,7 @@ const OfflineHeader = (props) => {
             src={props.trigger ? LogoDarkBig : LogoLightBig}
             alt="logo"
             className={props.classes.logo}
-            onClick={props.scrollToTop}
+            onClick={props.scrollToHome}
           />
           <div className={props.classes.buttonsDiv}>
           <Hidden only={"xs"}>
@@ -40,7 +40,7 @@ const OfflineHeader = (props) => {
               </Button>
               <Button
                  className={props.trigger ?props.classes.hoverBtn:props.classes.btn}
-                onClick={props.scrollToArtist}
+                onClick={props.scrollToServices}
               >
                 SERVICES
               </Button>
@@ -52,7 +52,7 @@ const OfflineHeader = (props) => {
               </Button> */}
               <Button
                  className={props.trigger ?props.classes.hoverBtn:props.classes.btn}
-             
+             onClick={props.scrollToContactUs}
               >
               CONTACT US
               </Button>

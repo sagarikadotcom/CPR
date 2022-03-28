@@ -62,13 +62,13 @@ const   Item=(props)=>
   return (
     <>
     
-    <Header trigger={trigger}/>
-        <Carousel indicators={false}>
+    <Header trigger={trigger} scrollToHome={scrollToHome} scrollToServices={scrollToServices} scrollToAboutUs={scrollToAboutUs} scrollToContactUs={scrollToContactUs}/>
+        <Carousel indicators={false}  >
             {
                 items.map( (item, i) => <Item key={i} item={item} props={props} /> )
             }
         </Carousel>
-       <div style={{margin:"auto", display:"flex", justifyContent:"center"}}>
+       <div style={{margin:"auto", display:"flex", justifyContent:"center"}}ref={homeRef}>
          <img src ={snippet} style={{max_width:1289}}/>
        </div>
        <div style={{background: "transparent linear-gradient(180deg, #11b3f229 0%, #00000000 100%) 0% 0% no-repeat padding-box"}}>
@@ -77,15 +77,18 @@ const   Item=(props)=>
            <Description style={{display:"flex", justifyContent:"center",}}/>
          
          </Grid>
-         <Grid container style={{display:"flex", justifyContent:"center",maxWidth:1298, margin:"auto", padding:50}}>
+         <Grid container style={{display:"flex", justifyContent:"center",maxWidth:1298, margin:"auto", padding:50}} ref={serviceRef}>
             <Services/>
          </Grid>
          {/* <Grid container style={{display:"flex", justifyContent:"center",maxWidth:1298, margin:"auto", padding:50}}>
             <Aboutus/>
          </Grid> */}
          </div>
-              <Contactus/>
-         <div style={{height:150, background:"black", display:"grid", justifyContent:"center", alignItems:"center", color:"white"}}>
+         <Grid container style={{display:"flex", justifyContent:"center",}} >
+         <Contactus />
+         </Grid>
+          
+         <div style={{height:70, background:"black", display:"grid", justifyContent:"center", alignItems:"center", color:"white"}}>
  {/*  <div style={{display:"flex", justifyContent:"space-evenly", padding:"3px 0px"}}>
     <Facebook />
     <Instagram/>

@@ -20,13 +20,13 @@ import {MdOutlineDoubleArrow} from 'react-icons/md'
 const Contactus = (props) => {
 
   return (
-  <div>
+  <div style={{ background:"aliceblue", width:"100%"}}>
     <h1 style={{color:"black", textAlign:"center", fontSize:30, fontWeight:700 }}>CONTACT US</h1>
    <Grid container spacing ={4} style={{margin:"10px auto", display:"flex", justifyContent:"center", maxWidth:1298 }}>
           
  <Grid item sm={6} xs={12}style={{textAlign:"center", display:"flex",justifyContent:"center", color:"black"}}>
    <Card style={{width:"100%", display:"flex", justifyContent:"center"}}>
-     <div style={{margin:"auto", background:"aliceblue"}}>
+     <div style={{margin:"auto",}}>
      <Typography style={{color:"black", fontSize:16, fontWeight:700, margin:20}}><FiMail style={{margin:"0px 5px"}}/> hello@canaanpetresort.com</Typography>
      <Typography style={{color:"black", fontSize:16, fontWeight:700,margin:20}}><FiPhoneCall style={{margin:"0px 5px"}}/> +91 8951133804, +91 8722804740</Typography>
      <Grid container  style={{margin:20, width:"100%"}}>
