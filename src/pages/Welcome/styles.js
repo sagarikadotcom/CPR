@@ -404,8 +404,15 @@ export const useStyles = () => ({
     height:700,
 
     [MUITheme.breakpoints.only("xs")]: {
-     height:200
+     height:200,
+     marginTop:78,
     },
+  },
+  snippet:{
+    maxWidth:1289,
+    [MUITheme.breakpoints.only("xs")]: {
+     width:"100%"
+     },
   }
 
 });

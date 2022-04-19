@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
 import Toolbar from "@material-ui/core/Toolbar";
 import { withStyles } from "@material-ui/styles";
-import { Avatar, Button, Card, CardActions, CardContent, CardMedia, Grid, Hidden, Paper } from "@material-ui/core";
+import { Avatar, Button, Card, CardActions, CardContent, CardMedia, Grid, Hidden, Paper, useTheme } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Carousel from 'react-material-ui-carousel'
@@ -13,16 +13,20 @@ import Pickup from '../../../assets/images/services/Pickupanddrop.jpg'
 import Swimming from '../../../assets/images/services/swimming.jpg'
 import Training from '../../../assets/images/services/training.jpg'
 import Grooming from '../../../assets/images/services/grooming.jpg'
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import {FiMail,FiPhoneCall} from "react-icons/fi"
 import {ImLocation} from "react-icons/im"
 import {MdOutlineDoubleArrow} from 'react-icons/md'
-const Contactus = (props) => {
 
+const Contactus = (props) => {
+  const theme = useTheme();
+  
+  const matches = useMediaQuery(theme.breakpoints.only("xs"));
   return (
   <div style={{ background:"aliceblue", width:"100%"}}>
     <h1 style={{color:"black", textAlign:"center", fontSize:30, fontWeight:700 }}>CONTACT US</h1>
-   <Grid container spacing ={4} style={{margin:"10px auto", display:"flex", justifyContent:"center", maxWidth:1298 }}>
+   <Grid container spacing ={matches?0:4} className={props.classes.gridContainer}>
           
  <Grid item sm={6} xs={12}style={{textAlign:"center", display:"flex",justifyContent:"center", color:"black"}}>
    <Card style={{width:"100%", display:"flex", justifyContent:"center"}}>

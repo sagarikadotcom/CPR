@@ -1,4 +1,4 @@
-import { Card, Grid, Typography } from '@material-ui/core'
+import { Card, Grid, Typography, useMediaQuery, useScrollTrigger, useTheme } from '@material-ui/core'
 import react from 'react'
 import Header from '../../components/SubHeader'
 
@@ -7,12 +7,19 @@ import Board from '../../assets/images/Boarding/boarding.jpg'
 import Food from '../../assets/images/Boarding/food.png'
 import {IoPawOutline}from 'react-icons/io5'
 import Footer from '../../components/Footer'
-const Boarding=()=>{
-return(
+import { useStyles } from './styles'
+import { withStyles } from '@material-ui/styles'
+const Training=(props)=>{
+
+
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  let trigger = useScrollTrigger({ disableHysteresis: true });
+    return(
     <>
-   <Header/>
+   <Header trigger={trigger}/>
 <div style={{ width:"100%", margin:"auto", marginTop:150., color:"black"}}>
-   <Typography style={{fontSize:38, fontWeight:700, textAlign :"center", margin:"20px auto"}}>TRAINING SERVICES</Typography>
+<Typography className={props.classes.heading}>TRAINING SERVICES</Typography>
 
 <Grid container style={{width:"90%", margin:"auto"}} spacing={4} >
 <Grid item sm={6}>
@@ -101,6 +108,5 @@ return(
     <Footer/>
     </>
 )
-}
-
-export default Boarding
+    }
+export default withStyles(useStyles)(Training);

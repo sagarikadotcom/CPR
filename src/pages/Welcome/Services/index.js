@@ -51,9 +51,9 @@ const Services = (props) => {
   return (
   <>
       <h1 style={{color:"black", textAlign:"center", fontSize:30, fontWeight:700 }}>SERVICES</h1>
-   <Grid container spacing ={4} style={{margin:"50px auto", display:"flex", justifyContent:"center", width:"100%", }}>
-       <Grid item sm={4}>
-           <Card style={{borderRadius:25, boxShadow:"2px 2px 2px 4px #00000026",padding:"30px 0px", height:"100%", position:"relative", background:"transparent linear-gradient(180deg, #ffb7937a 0%, #00000000 100%) 0% 0% no-repeat padding-box"}}>
+   <Grid container spacing ={3} classname={props.classes.gridContainer}>
+       <Grid item sm={4} xs={12}className={props.classes.grid}>
+           <Card className={props.classes.card}>
            <Typography variant="h2" style={{color:"black", textAlign:"center", fontSize:30, fontWeight:700, marginBottom:30}}>BOARDING</Typography>   
                <CardMedia
         component="img"
@@ -73,8 +73,7 @@ const Services = (props) => {
            </Card>
        </Grid>
        <Grid item sm={4}>
-           <Card style={{borderRadius:25, boxShadow:"2px 2px 2px 4px #00000026",padding:"30px 0px", height:"100%", position:"relative", background:"transparent linear-gradient(180deg, #67e5eb52 0%, #00000000 100%) 0% 0% no-repeat padding-box"}}>
-           <Typography variant="h2" style={{color:"black", textAlign:"center", fontSize:30, fontWeight:700, marginBottom:30}}>Grooming</Typography>   
+       <Card className={props.classes.card}>    <Typography variant="h2" style={{color:"black", textAlign:"center", fontSize:30, fontWeight:700, marginBottom:30}}>Grooming</Typography>   
                <CardMedia
         component="img"
         height="194"
@@ -93,8 +92,7 @@ const Services = (props) => {
            </Card>
        </Grid>   
        <Grid item sm={4}>
-           <Card style={{borderRadius:25, boxShadow:"2px 2px 2px 4px #00000026",padding:"30px 0px", height:"100%",position:"relative", background:"linear-gradient(#5e326285 0%, rgba(0, 0, 0, 0) 100%) 0% 0% no-repeat padding-box padding-box transparent"}}>
-           <Typography variant="h2" style={{color:"black", textAlign:"center", fontSize:30, fontWeight:700, marginBottom:30}}>Swimming</Typography>   
+       <Card className={props.classes.card}>  <Typography variant="h2" style={{color:"black", textAlign:"center", fontSize:30, fontWeight:700, marginBottom:30}}>Swimming</Typography>   
                <CardMedia
         component="img"
         height="194"
@@ -118,10 +116,9 @@ padding: 25}} onClick={handleSwimming}>Know More</Button>
 
     
    </Grid>
-   <Grid container spacing ={4} style={{margin:"50px auto", display:"flex", justifyContent:"center", }}>
+   <Grid container spacing ={3} style={{margin:"50px auto", display:"flex", justifyContent:"center", }}>
        <Grid item sm={4}>
-           <Card style={{borderRadius:25, boxShadow:"2px 2px 2px 4px #00000026",padding:"30px 0px", height:"100%", position:"relative", background:"linear-gradient(#cfdeb096 0%, rgba(0, 0, 0, 0) 100%) 0% 0% no-repeat padding-box padding-box transparent"}}>
-           <Typography variant="h2" style={{color:"black", textAlign:"center", fontSize:30, fontWeight:700, marginBottom:30}}>
+       <Card className={props.classes.card}>   <Typography variant="h2" style={{color:"black", textAlign:"center", fontSize:30, fontWeight:700, marginBottom:30}}>
 Pick Up and Drop</Typography>   
                <CardMedia
         component="img"
@@ -143,8 +140,7 @@ color: "black",height: "50px",fontSize: "16px",fontWeight: "700",borderRadius: "
            </Card>
        </Grid>
        <Grid item sm={4}>
-           <Card style={{borderRadius:25, boxShadow:"2px 2px 2px 4px #00000026",padding:"30px 0px", height:"100%", position:"relative", background:"linear-gradient(#c3ddffa6 0%, rgba(0, 0, 0, 0) 100%) 0% 0% no-repeat padding-box padding-box transparent"}}>
-           <Typography variant="h2" style={{color:"black", textAlign:"center", fontSize:30, fontWeight:700, marginBottom:30}}>Training</Typography>   
+       <Card className={props.classes.card}>  <Typography variant="h2" style={{color:"black", textAlign:"center", fontSize:30, fontWeight:700, marginBottom:30}}>Training</Typography>   
                <CardMedia
         component="img"
         height="194"
@@ -163,8 +159,7 @@ padding: 25}} onClick={handleTraining}>Know More</Button>
       </CardActions>
            </Card>
        </Grid>   <Grid item sm={4}>
-           <Card style={{borderRadius:25, boxShadow:"2px 2px 2px 4px #00000026",padding:"30px 0px", height:"100%",position:"relative",  background:"linear-gradient(#f5dc5f66 0%, rgba(0, 0, 0, 0) 100%) 0% 0% no-repeat padding-box padding-box transparent"}}>
-           <Typography variant="h2" style={{color:"black", textAlign:"center", fontSize:30, fontWeight:700, marginBottom:30}}>
+       <Card className={props.classes.card}>   <Typography variant="h2" style={{color:"black", textAlign:"center", fontSize:30, fontWeight:700, marginBottom:30}}>
 Behavioral Correction</Typography>   
                <CardMedia
         component="img"

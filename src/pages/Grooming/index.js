@@ -1,18 +1,22 @@
-import { Card, Grid, Typography } from '@material-ui/core'
+import { Card, Grid, Typography, useMediaQuery, useScrollTrigger, useTheme } from '@material-ui/core'
 import react from 'react'
 import Header from '../../components/SubHeader'
 
 import Groom from '../../assets/images/Grooming/gpet.jpg'
 import {IoPawOutline}from 'react-icons/io5'
 import Footer from '../../components/Footer'
+import { useStyles } from './styles'
+import { withStyles } from '@material-ui/styles'
 
-const Grooming=()=>{
-
+const Grooming=(props)=>{
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  let trigger = useScrollTrigger({ disableHysteresis: true });
 return(
     <>
-   <Header/>
-    <Card raised style={{ width:"80%", margin:"auto", marginTop:150., color:"black"}}>
-        <Typography style={{fontSize:38, fontWeight:700, textAlign :"center", margin:"20px auto"}}> GROOMING SERVICES</Typography>
+ <Header trigger={trigger}/>
+    <Card  raised={matches} className={props.classes.card} elevation={matches?8:0}>
+        <Typography className={props.classes.heading}> GROOMING SERVICES</Typography>
         <Grid container style={{margin:"30px auto"}} spacing={2}>
             <Grid item sm={7} style={{display:"flex", justifyContent:"center", margin:"auto 0px"}}>
                 <div  style={{width:"80%", color:"black",fontSize :16 }}>
@@ -64,4 +68,4 @@ return(
 )
 }
 
-export default Grooming
+export default withStyles(useStyles)(Grooming);

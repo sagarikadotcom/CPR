@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import { withStyles } from "@material-ui/styles";
 import { Button, Hidden, Toolbar, Typography } from "@material-ui/core";
@@ -51,6 +51,56 @@ const SubHeader = (props) => {
     <img src={Youtube} onClick={handleYt}/>
     <span style={{display:"flex", cursor:"none"}}> <img src={Call}/><div><Typography style={{fontSize:"1rem", fontWeight:600}}>+91 8951133804</Typography><Typography  style={{fontSize:"1rem", fontWeight:600}}>+91 8722804740
 </Typography></div> </span>
+          </div>
+        </div>
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+export default withStyles(useStyles)(SubHeader);
+ */
+
+import React from "react";
+import AppBar from "@material-ui/core/AppBar";
+import { withStyles } from "@material-ui/styles";
+import { Button, Hidden, Toolbar } from "@material-ui/core";
+
+import { useStyles } from "./styles";
+import LogoDarkBig from "../../assets/images/logos/header-logo.png";
+import LogoLightBig from "../../assets/images/logos/header-logo.png";
+import {  useNavigate  } from "react-router-dom";
+
+import {FiPhoneCall} from 'react-icons/fi'
+import { GlobalRoutes } from "../../GlobalRouter/Routes";
+
+const SubHeader = (props) => {
+  const navigate = useNavigate();
+ 
+  const handleLogoClick=()=>{
+    navigate(GlobalRoutes.WELCOME.path);
+}
+  return (
+    <AppBar
+      classes={{ root: props.trigger ? props.classes.triggeredRoot : props.classes.appBarRoot }}
+      elevation={props.trigger ? 24 : 0}
+    >
+      <Toolbar classes={{ root: props.classes.toolBarRoot }}>
+        <div className={props.classes.toolBarDiv}>
+          <img
+            src={props.trigger ? LogoDarkBig : LogoLightBig}
+            alt="logo"
+            className={props.classes.logo}
+            onClick={handleLogoClick}
+          />
+          <div className={props.classes.buttonsDiv}>
+       
+              <Button style={{cursor:"none"}}
+                 className={props.classes.btn}
+                           >
+                             <FiPhoneCall style={{marginRight:10}}/>
+                +91 8951133804
+              </Button>
           </div>
         </div>
       </Toolbar>

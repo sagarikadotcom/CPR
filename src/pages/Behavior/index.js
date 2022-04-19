@@ -1,18 +1,22 @@
-import { Card, Grid, Typography } from '@material-ui/core'
+import { Card, Grid, Typography, useMediaQuery, useScrollTrigger, useTheme } from '@material-ui/core'
 import react from 'react'
 import Header from '../../components/SubHeader'
 
 import Behavior from '../../assets/images/Behavior/behavior.png'
 import {IoPawOutline}from 'react-icons/io5'
 import Footer from '../../components/Footer'
+import { withStyles } from '@material-ui/styles'
+import { useStyles } from './styles'
 
-const Pickup=()=>{
-
+const Behaviour=(props)=>{
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  let trigger = useScrollTrigger({ disableHysteresis: true });
 return(
     <>
-   <Header/>
-    <Card raised style={{ width:"80%", margin:"auto", marginTop:150, color:"black"}}>
-        <Typography style={{fontSize:38, fontWeight:700, textAlign :"center", margin:"20px auto"}}>Behavioral Correction Programs</Typography>
+   <Header trigger={trigger}/>
+    <Card  raised={matches} className={props.classes.card} elevation={matches?8:0}>
+        <Typography className={props.classes.heading}>Behavioral Correction Programs</Typography>
         <Grid container style={{margin:"30px auto"}} spacing={2}>
             <Grid item sm={7} style={{display:"flex", justifyContent:"center", margin:"auto 0px"}}>
                 <div  style={{width:"80%", color:"black",fontSize :16 }}>
@@ -63,5 +67,4 @@ return(
     </>
 )
 }
-
-export default Pickup
+export default withStyles(useStyles)(Behaviour);

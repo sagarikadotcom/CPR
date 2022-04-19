@@ -53,7 +53,7 @@ export const useStyles = (MUITheme) => ({
       height: 100,
       [MUITheme.breakpoints.only("xs")]: {
         width: 100,
-        height: 15,
+        height: 44,
       },
     },
     userBtn: {
@@ -89,10 +89,15 @@ export const useStyles = (MUITheme) => ({
 
       display: "flex",
 
-      justifyContent: "space-evenly"
+      justifyContent: "end"
     },
     btn:{
-fontSize:21
-    }
+fontSize:21,
+color:"black",
+[MUITheme.breakpoints.only("xs")]: {
+ fontSize:14
+},
+    },
+  
   });
   

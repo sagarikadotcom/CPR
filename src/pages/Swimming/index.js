@@ -1,18 +1,23 @@
-import { Card, Grid, Typography } from '@material-ui/core'
+import { Card, Grid, Typography, useMediaQuery, useScrollTrigger, useTheme } from '@material-ui/core'
 import react from 'react'
 import Header from '../../components/SubHeader'
 
 import Swim from '../../assets/images/Swimming/Swim.jpg'
 import {IoPawOutline}from 'react-icons/io5'
 import Footer from '../../components/Footer'
+import { useStyles } from './styles'
+import { withStyles } from '@material-ui/styles'
 
-const Swimming=()=>{
+const Swimming=(props)=>{
 
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  let trigger = useScrollTrigger({ disableHysteresis: true });
 return(
     <>
-   <Header/>
-    <Card raised style={{ width:"80%", margin:"auto", marginTop:150., color:"black"}}>
-        <Typography style={{fontSize:38, fontWeight:700, textAlign :"center", margin:"20px auto"}}> SWIMMING SERVICES</Typography>
+   <Header trigger={trigger}/>
+    <Card  raised={matches} className={props.classes.card} elevation={matches?8:0}>
+        <Typography className={props.classes.heading}>  SWIMMING SERVICES</Typography>
         <Grid container style={{margin:"30px auto"}} spacing={2}>
             <Grid item sm={7} style={{display:"flex", justifyContent:"center", margin:"auto 0px"}}>
                 <div  style={{width:"80%", color:"black",fontSize :16 }}>
@@ -47,5 +52,4 @@ Swimming sessions are chargeable at INR 500/- per hour.
     </>
 )
 }
-
-export default Swimming
+export default withStyles(useStyles)(Swimming);

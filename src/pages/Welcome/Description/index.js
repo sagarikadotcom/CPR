@@ -10,7 +10,12 @@ import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
 import group from '../../../assets/images/FacilityIcons/group.png'
-export default function MediaControlCard() {
+import { Hidden } from '@material-ui/core';
+import { useStyles } from "./styles";
+import { withStyles } from '@material-ui/styles';
+
+
+const MediaControlCard=()=> {
   const theme = useTheme();
 
   return (
@@ -30,12 +35,17 @@ Canaan Pet Resort offers overnight stay, daycare, training and behavior correcti
           </Typography>
         </CardContent>
     </Box>
+    <Hidden smDown>
     <CardMedia
         component="img"
         sx={{ width: 151 }}
         image={group}
         style={{width:"50%", objectFit:"contain"}}
       />
+      </Hidden>
   </Card>
   );
 }
+
+
+export default withStyles(useStyles)(MediaControlCard);

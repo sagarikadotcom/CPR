@@ -1,4 +1,4 @@
-import { Card, Grid, Typography } from '@material-ui/core'
+import { Card, Grid, Hidden, Typography, useScrollTrigger, useTheme } from '@material-ui/core'
 import react from 'react'
 import Header from '../../components/SubHeader'
 
@@ -7,12 +7,22 @@ import Board from '../../assets/images/Boarding/boarding.jpg'
 import Food from '../../assets/images/Boarding/food.png'
 import {IoPawOutline}from 'react-icons/io5'
 import Footer from '../../components/Footer'
-const Boarding=()=>{
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { PropaneSharp } from '@mui/icons-material'
+import { useStyles } from './styles'
+import { withStyles } from '@material-ui/styles'
+
+const Boarding=(props)=>{
+    
+  const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  let trigger = useScrollTrigger({ disableHysteresis: true });
+
 return(
     <>
-   <Header/>
-    <Card raised style={{ width:"80%", margin:"auto", marginTop:150., color:"black"}}>
-        <Typography style={{fontSize:38, fontWeight:700, textAlign :"center", margin:"20px auto"}}> BOARDING SERVICES</Typography>
+   <Header trigger={trigger}/>
+    <Card  raised={matches} className={props.classes.card} elevation={matches?8:0}>
+        <Typography className={props.classes.heading}> BOARDING SERVICES</Typography>
         <Grid container style={{margin:"30px auto"}} spacing={2}>
             <Grid item sm={7} style={{display:"flex", justifyContent:"center", margin:"auto 0px"}}>
                 <div  style={{width:"80%", color:"black",fontSize :16 }}>
@@ -119,9 +129,9 @@ This should be done 1-2 weeks prior to boarding, if it hasn’t been done before
 </Grid>
    </Grid>
     </Card>
+  
     <Footer/>
     </>
 )
 }
-
-export default Boarding
+export default withStyles(useStyles)(Boarding);

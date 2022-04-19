@@ -62,6 +62,7 @@ const Footer = (props) => {
 
   return (
   <>
+   <Hidden only={"xs"}>
   <div style={{display:"flex",marginTop:100,padding:"10px 0px", boxShadow:"0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%)" }}>
   <div style={{height:200}}>
       <img style={{height:200}} src={FooterLogo}/>
@@ -105,13 +106,16 @@ const Footer = (props) => {
 
 </Grid>
 </div>
+</Hidden>
 <div style={{height:80, background:"black", display:"grid", justifyContent:"center", alignItems:"center"}}>
   <div style={{display:"flex", justifyContent:"space-evenly"}}>
     <facebook />
     <instagram/>
     <yutube/>
   </div>
-  <Typography>©{new Date().getFullYear()} Canaan Pet Resort is a unit of Canaan Pet Ventures Pvt. Ltd. All Rights Reserved</Typography>
+ 
+  <Typography style={{color:"white", textAlign:"center"}}>©{new Date().getFullYear()} Canaan Pet Resort is a unit of Canaan Pet Ventures Pvt. Ltd. All Rights Reserved</Typography>
+
 </div>
 </>
   );

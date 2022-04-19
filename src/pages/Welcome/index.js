@@ -63,17 +63,17 @@ const   Item=(props)=>
     <>
     
     <Header trigger={trigger} scrollToHome={scrollToHome} scrollToServices={scrollToServices} scrollToAboutUs={scrollToAboutUs} scrollToContactUs={scrollToContactUs}/>
-        <Carousel indicators={false}  >
+        <Carousel indicators={false}   >
             {
                 items.map( (item, i) => <Item key={i} item={item} props={props} /> )
             }
         </Carousel>
        <div style={{margin:"auto", display:"flex", justifyContent:"center"}}ref={homeRef}>
-         <img src ={snippet} style={{max_width:1289}}/>
+         <img src ={snippet} className={props.classes.snippet}/>
        </div>
        <div style={{background: "transparent linear-gradient(180deg, #11b3f229 0%, #00000000 100%) 0% 0% no-repeat padding-box"}}>
 
-         <Grid container style={{display:"flex", justifyContent:"center",maxWidth:1298, margin:"auto", padding:50}}>
+         <Grid container style={{display:"flex", justifyContent:"center",maxWidth:1298, margin:"auto", }}>
            <Description style={{display:"flex", justifyContent:"center",}}/>
          
          </Grid>
@@ -84,7 +84,7 @@ const   Item=(props)=>
             <Aboutus/>
          </Grid> */}
          </div>
-         <Grid container style={{display:"flex", justifyContent:"center",}} >
+         <Grid container style={{display:"flex", justifyContent:"center",}} ref={contactUsRef} >
          <Contactus />
          </Grid>
           
@@ -94,7 +94,7 @@ const   Item=(props)=>
     <Instagram/>
     <YouTube/>
   </div> */}
-  <Typography>©{new Date().getFullYear()} Canaan Pet Resort is a unit of Canaan Pet Ventures Pvt. Ltd. All Rights Reserved</Typography>
+  <Typography style={{textAlign:"center"}}>©{new Date().getFullYear()} Canaan Pet Resort is a unit of Canaan Pet Ventures Pvt. Ltd. All Rights Reserved</Typography>
 </div>
 </>
   );
