@@ -18,6 +18,14 @@ const OfflineHeader = (props) => {
     navigate(GlobalRoutes.WELCOME.path);
 }
   return (<>
+  <Hidden smUp>
+  <AppBar  >
+      <Toolbar className={props.classes.eventToolbar} >
+       <Typography>Become a certified dog trainer in 15 days!</Typography>
+       <Typography  style={{color:"#01b7ff"}}>(1st July to 15 July)</Typography>
+        </Toolbar>
+    </AppBar></Hidden>
+    <Hidden  only={"xs"}>
     <AppBar  >
       <Toolbar style={{background:"black", width:"-webkit-fill-available",color:"white", margin:"auto", padding:"0px 75px", display:"flex", justifyContent:"space-between"}} >
       <Typography style={{fontSize:24}}><span ><MdOutlineLocationOn style={{paddingTop:8}}/></span>Bangalore | Events</Typography>
@@ -25,10 +33,12 @@ const OfflineHeader = (props) => {
       <Typography style={{fontSize:24}}>Need help? call us:<span  style={{color:"#01b7ff"}}> 8951133804</span></Typography>
       </Toolbar>
     </AppBar>
+    </Hidden>
+   
     <AppBar
       classes={{ root: props.trigger ? props.classes.triggeredRoot : props.classes.appBarRoot }}
       elevation={props.trigger ? 24 : 0}
-      style={{marginTop:65}} >
+      >
       <Toolbar classes={{ root: props.classes.toolBarRoot }}>
         <div className={props.classes.toolBarDiv}>
           <img
@@ -64,12 +74,15 @@ const OfflineHeader = (props) => {
               CONTACT US
               </Button>
               </Hidden>
-             {/*  <Button style={{cursor:"none"}}
+              <Hidden smUp>
+              <Button style={{cursor:"none"}}
                  className={props.trigger ?props.classes.hoverBtn:props.classes.btn}
                            >
                              <FiPhoneCall style={{marginRight:10}}/>
                 +91 8951133804
-              </Button> */}
+              </Button>
+                </Hidden>
+          
           </div>
         </div>
       </Toolbar>

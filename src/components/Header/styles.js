@@ -2,11 +2,12 @@ export const useStyles = (MUITheme) => ({
     appBarRoot: {
       height: 110,
       padding: "1.714rem",
-     
+      marginTop:65,
       background: "white",
       [MUITheme.breakpoints.only("xs")]: {
         padding: 12,
         height: "66px",
+        marginTop:56
       },
     },
     triggeredRoot: {
@@ -16,12 +17,14 @@ export const useStyles = (MUITheme) => ({
       boxShadow: "0px 3px 6px #00000029",
       color:"black",
       opacity: 1,
+      marginTop:65,
       [MUITheme.breakpoints.only("sm")]: {
         height: 96,
       },
       [MUITheme.breakpoints.only("xs")]: {
         padding: 16,
         height: 66,
+        marginTop:56
       },
     },
     toolBarRoot: {
@@ -63,6 +66,12 @@ export const useStyles = (MUITheme) => ({
         background: "#FFFFFF26 0% 0% no-repeat padding-box",
         borderRadius: 28,
         minWidth: 78,
+      },
+    },
+    bannerText:{
+      fontSize:24,
+           [MUITheme.breakpoints.only("xs")]: {
+        fontSize:16,
       },
     },
     hoverSignUp: {
@@ -124,6 +133,14 @@ fontSize:21,
 [MUITheme.breakpoints.only("xs")]: {
   fontSize:16,
 },
+    },
+    eventToolbar:{
+      background:"black", width:"-webkit-fill-available",color:"white", margin:"auto", padding:"0px 75px",
+      [MUITheme.breakpoints.only("xs")]: {
+      display:"block",
+      padding:0,
+      textAlign:"center"
+      },
     }
   });
   

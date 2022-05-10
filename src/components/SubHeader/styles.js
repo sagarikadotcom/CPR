@@ -2,11 +2,13 @@ export const useStyles = (MUITheme) => ({
     appBarRoot: {
       height: 110,
       padding: "1.714rem",
-      backgroundColor: "inherit",
-      background: "transparent linear-gradient(178deg, #01b7ff 0%, #00000000 100%) 0% 0% no-repeat padding-box",
+            marginTop:65,
+      background: "#01b7ff",
       [MUITheme.breakpoints.only("xs")]: {
         padding: 12,
         height: "66px",
+        marginTop:55,
+      background: "#01b7ff",
       },
     },
     triggeredRoot: {
@@ -15,12 +17,14 @@ export const useStyles = (MUITheme) => ({
       background: "#FFFFFF 0% 0% no-repeat padding-box;",
       boxShadow: "0px 3px 6px #00000029",
       opacity: 1,
+      marginTop:65,
       [MUITheme.breakpoints.only("sm")]: {
         height: 96,
       },
       [MUITheme.breakpoints.only("xs")]: {
         padding: 16,
         height: 66,
+        marginTop:55,
       },
     },
     toolBarRoot: {
@@ -98,6 +102,14 @@ color:"black",
  fontSize:14
 },
     },
-  
+    eventToolbar:{
+      background:"black", width:"-webkit-fill-available",color:"white", margin:"auto", padding:"0px 75px",
+      [MUITheme.breakpoints.only("xs")]: {
+      display:"block",
+      padding:0,
+      textAlign:"center",
+      padding:10
+      },
+    }
   });
   

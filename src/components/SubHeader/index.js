@@ -82,17 +82,26 @@ const SubHeader = (props) => {
     navigate(GlobalRoutes.WELCOME.path);
 }
   return (
-    <><AppBar  >
-    <Toolbar style={{background:"black", width:"-webkit-fill-available",color:"white", margin:"auto", padding:"0px 75px", display:"flex", justifyContent:"space-between"}} >
-    <Typography style={{fontSize:24}}><span ><MdOutlineLocationOn style={{paddingTop:8}}/></span>Bangalore | Events</Typography>
-    <Typography style={{fontSize:24}}>Become a certified dog trainer in 15 days! <span  style={{color:"#01b7ff"}}>(1st July to 15 July)</span></Typography>
-    <Typography style={{fontSize:24}}>Need help? call us:<span  style={{color:"#01b7ff"}}> 8951133804</span></Typography>
-    </Toolbar>
-  </AppBar>
+    <><Hidden smUp>
+    <AppBar  >
+        <Toolbar className={props.classes.eventToolbar} >
+         <Typography>Become a certified dog trainer in 15 days!</Typography>
+         <Typography  style={{color:"#01b7ff"}}>(1st July to 15 July)</Typography>
+          </Toolbar>
+      </AppBar></Hidden>
+      <Hidden  only={"xs"}>
+      <AppBar  >
+        <Toolbar style={{background:"black", width:"-webkit-fill-available",color:"white", margin:"auto", padding:"0px 75px", display:"flex", justifyContent:"space-between"}} >
+        <Typography style={{fontSize:24}}><span ><MdOutlineLocationOn style={{paddingTop:8}}/></span>Bangalore | Events</Typography>
+        <Typography style={{fontSize:24}}>Become a certified dog trainer in 15 days! <span  style={{color:"#01b7ff"}}>(1st July to 15 July)</span></Typography>
+        <Typography style={{fontSize:24}}>Need help? call us:<span  style={{color:"#01b7ff"}}> 8951133804</span></Typography>
+        </Toolbar>
+      </AppBar>
+      </Hidden>
     <AppBar
       classes={{ root: props.trigger ? props.classes.triggeredRoot : props.classes.appBarRoot }}
       elevation={props.trigger ? 24 : 0}
-      style={{marginTop:65,}} 
+     
     >
       <Toolbar classes={{ root: props.classes.toolBarRoot }}>
         <div className={props.classes.toolBarDiv}>
@@ -102,15 +111,18 @@ const SubHeader = (props) => {
             className={props.classes.logo}
             onClick={handleLogoClick}
           />
-         {/*  <div className={props.classes.buttonsDiv}>
+           <Hidden smUp>
+           <div className={props.classes.buttonsDiv}>
        
-              <Button style={{cursor:"none"}}
-                 className={props.classes.btn}
-                           >
-                             <FiPhoneCall style={{marginRight:10}}/>
-                +91 8951133804
-              </Button>
-          </div> */}
+       <Button style={{cursor:"none"}}
+          className={props.classes.btn}
+                    >
+                      <FiPhoneCall style={{marginRight:10}}/>
+         +91 8951133804
+       </Button>
+   </div>
+           </Hidden>
+       
         </div>
       </Toolbar>
     </AppBar>

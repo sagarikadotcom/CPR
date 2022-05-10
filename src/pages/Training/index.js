@@ -18,7 +18,7 @@ const Training=(props)=>{
     return(
     <>
    <Header trigger={trigger}/>
-<div style={{ width:"100%", margin:"auto", marginTop:150., color:"black"}}>
+<div style={{ width:"100%", margin:"auto", marginTop:200, color:"black"}}>
 <Typography className={props.classes.heading}>TRAINING SERVICES</Typography>
 
 <Grid container style={{width:"90%", margin:"auto"}} spacing={4} >
