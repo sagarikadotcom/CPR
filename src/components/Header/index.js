@@ -1,13 +1,13 @@
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import { withStyles } from "@material-ui/styles";
-import { Button, Hidden, Toolbar } from "@material-ui/core";
+import { Button, Hidden, Toolbar, Typography } from "@material-ui/core";
 
 import { useStyles } from "./styles";
 import LogoDarkBig from "../../assets/images/logos/header-logo.png";
 import LogoLightBig from "../../assets/images/logos/header-logo.png";
 import {  useNavigate  } from "react-router-dom";
-
+import {MdOutlineLocationOn} from "react-icons/md"
 import {FiPhoneCall} from 'react-icons/fi'
 import { GlobalRoutes } from "../../GlobalRouter/Routes";
 
@@ -17,11 +17,18 @@ const OfflineHeader = (props) => {
   const handleLogoClick=()=>{
     navigate(GlobalRoutes.WELCOME.path);
 }
-  return (
+  return (<>
+    <AppBar  >
+      <Toolbar style={{background:"black", width:"-webkit-fill-available",color:"white", margin:"auto", padding:"0px 75px", display:"flex", justifyContent:"space-between"}} >
+      <Typography style={{fontSize:24}}><span ><MdOutlineLocationOn style={{paddingTop:8}}/></span>Bangalore | Events</Typography>
+      <Typography style={{fontSize:24}}>Become a certified dog trainer in 15 days! <span  style={{color:"#01b7ff"}}>(1st July to 15 July)</span></Typography>
+      <Typography style={{fontSize:24}}>Need help? call us:<span  style={{color:"#01b7ff"}}> 8951133804</span></Typography>
+      </Toolbar>
+    </AppBar>
     <AppBar
       classes={{ root: props.trigger ? props.classes.triggeredRoot : props.classes.appBarRoot }}
       elevation={props.trigger ? 24 : 0}
-    >
+      style={{marginTop:65}} >
       <Toolbar classes={{ root: props.classes.toolBarRoot }}>
         <div className={props.classes.toolBarDiv}>
           <img
@@ -57,16 +64,18 @@ const OfflineHeader = (props) => {
               CONTACT US
               </Button>
               </Hidden>
-              <Button style={{cursor:"none"}}
+             {/*  <Button style={{cursor:"none"}}
                  className={props.trigger ?props.classes.hoverBtn:props.classes.btn}
                            >
                              <FiPhoneCall style={{marginRight:10}}/>
                 +91 8951133804
-              </Button>
+              </Button> */}
           </div>
         </div>
       </Toolbar>
     </AppBar>
+    </>
+  
   );
 };
 

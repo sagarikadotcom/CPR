@@ -61,8 +61,7 @@ const   Item=(props)=>
 }
   return (
     <>
-    
-    <Header trigger={trigger} scrollToHome={scrollToHome} scrollToServices={scrollToServices} scrollToAboutUs={scrollToAboutUs} scrollToContactUs={scrollToContactUs}/>
+    <Header  trigger={trigger} scrollToHome={scrollToHome} scrollToServices={scrollToServices} scrollToAboutUs={scrollToAboutUs} scrollToContactUs={scrollToContactUs}/>
         <Carousel indicators={false}   >
             {
                 items.map( (item, i) => <Item key={i} item={item} props={props} /> )

@@ -2,7 +2,7 @@
 
 export const useStyles = (MUITheme) => ({
   card:{
-      width:"80%", margin:"auto", marginTop:150., color:"black",
+      width:"80%", margin:"auto", marginTop:200, color:"black",
       [MUITheme.breakpoints.only("xs")]: {
           margin:"70px auto"
         },
