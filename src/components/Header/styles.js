@@ -2,7 +2,7 @@ export const useStyles = (MUITheme) => ({
     appBarRoot: {
       height: 110,
       padding: "1.714rem",
-      marginTop:65,
+      marginTop:63,
       background: "white",
       [MUITheme.breakpoints.only("xs")]: {
         padding: 12,
@@ -11,13 +11,13 @@ export const useStyles = (MUITheme) => ({
       },
     },
     triggeredRoot: {
-      height: 100,
+      height: 110,
       padding: "1.714rem",
       background: "#01b7ff  0% 0% no-repeat padding-box;",
       boxShadow: "0px 3px 6px #00000029",
       color:"black",
       opacity: 1,
-      marginTop:65,
+      marginTop:63,
       [MUITheme.breakpoints.only("sm")]: {
         height: 96,
       },
@@ -141,6 +141,11 @@ fontSize:21,
       padding:0,
       textAlign:"center"
       },
+    },
+    registerNowbtn:{
+      border:"2px solid #01b7ff",
+      borderRadius:"25px",
+      background:"#01b7ff"
     }
   });
   

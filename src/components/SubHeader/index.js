@@ -81,6 +81,10 @@ const SubHeader = (props) => {
   const handleLogoClick=()=>{
     navigate(GlobalRoutes.WELCOME.path);
 }
+const handleTrainTheTrainer=()=>{
+  navigate(GlobalRoutes.TRAIN_THE_TRAINER.path);
+  
+  }
   return (
     <><Hidden smUp>
     <AppBar  >
@@ -94,8 +98,8 @@ const SubHeader = (props) => {
         <Toolbar style={{background:"black", width:"-webkit-fill-available",color:"white", margin:"auto", padding:"0px 75px", display:"flex", justifyContent:"space-between"}} >
         <Typography style={{fontSize:24}}><span ><MdOutlineLocationOn style={{paddingTop:8}}/></span>Bangalore | Events</Typography>
         <Typography style={{fontSize:24}}>Become a certified dog trainer in 15 days! <span  style={{color:"#01b7ff"}}>(1st July to 15 July)</span></Typography>
-        <Typography style={{fontSize:24}}>Need help? call us:<span  style={{color:"#01b7ff"}}> 8951133804</span></Typography>
-        </Toolbar>
+        <Button onClick={handleTrainTheTrainer}className={props.classes.registerNowbtn}>Register Now</Button>
+ </Toolbar>
       </AppBar>
       </Hidden>
     <AppBar

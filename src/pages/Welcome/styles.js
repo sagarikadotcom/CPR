@@ -3,7 +3,7 @@ import ExtraBoldFont from "../../assets/fonts/Poppins-ExtraBold.ttf";
 import BoldFont from "../../assets/fonts/Poppins-ExtraBold.ttf";
 import RegularFont from "../../assets/fonts/Poppins-Regular.ttf";
 
-import Banner from "../../assets/images/corousel/banner.png";
+import Banner from "../../assets/Banner.JPG";
 const poppinsBoldFont = new FontFace("Poppins Bold", `url(${BoldFont})`);
 const poppinsExtraBoldFont = new FontFace("Poppins ExtraBold", `url(${ExtraBoldFont})`);
 const poppinsRegularFont = new FontFace("Poppins Regular", `url(${RegularFont})`);
@@ -238,7 +238,8 @@ export const useStyles = () => ({
     height: "100vh",
   },
   image: {
-    background: `linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(${Banner}) no-repeat center center`,
+    background: `linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),url(${Banner}) no-repeat center center`,
+
     backgroundRepeat: "no-repeat",
     backgroundColor: MUITheme.palette.type === "light" ? MUITheme.palette.grey[50] : MUITheme.palette.grey[900],
     backgroundSize: "cover",
@@ -247,13 +248,18 @@ export const useStyles = () => ({
     display: "flex",
     justifyContent: "center",
     color: "white",
-    height: "100%",
+    height: "100vh",
     cursor: "pointer",
     [MUITheme.breakpoints.only("sm")]: {
-      height: "240px",
+      height: "427px",
     },
     [MUITheme.breakpoints.only("xs")]: {
-      height: "100px",
+      backgroundSize: "contain",
+      height: "427px",
+      position:"relative",
+    background: `url(${Banner}) no-repeat center center`,
+
+
     },
   },
   avatar: {
@@ -413,6 +419,26 @@ export const useStyles = () => ({
     [MUITheme.breakpoints.only("xs")]: {
      width:"100%"
      },
-  }
+  },
+  registerNowbtn:{
+    border:"3px solid #01b7ff",
+    background:"#01b7ff",
+    fontSize:30,
+    borderRadius:"75px",
+    padding:16,
+    [MUITheme.breakpoints.only("xs")]: {
+      borderRadius:"25px",
+    border:"2px solid #01b7ff",
+    fontSize:16,
+    padding:8,
 
+
+    }
+
+  },
+  btnContainer:{
+    [MUITheme.breakpoints.only("xs")]: {
+  position:"absolute", bottom:"25px"
+    }
+  }
 });

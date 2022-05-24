@@ -8,10 +8,7 @@ const Grooming = lazy(() => import("../pages/Grooming"));
 const Swimming = lazy(() => import("../pages/Swimming"));
 const Pickup = lazy(() => import("../pages/Pickup"));
 const Behavior = lazy(() => import("../pages/Behavior"));
-
-
-
-
+const TrainTheTrainer = lazy(() => import("../pages/TrainTheTrainer"));
 
 
 
@@ -22,10 +19,7 @@ const GroomingComponent= Grooming
 const SwimmingComponent= Swimming
 const PickupComponent= Pickup
 const BehaviourComponent= Behavior
-
-
-
-
+const TrainTheTrainerComponent= TrainTheTrainer
 
 
 
@@ -35,6 +29,8 @@ const GROOMING_PATH = "/grooming";
 const SWIMMING_PATH = "/swimming";
 const PICKUP_PATH = "/transport";
 const BEHAVIOR_PATH = "/behavior";
+const TRAIN_THE_TRAINER_PATH = "/train-the-trainer";
+
 
 
 
@@ -83,6 +79,12 @@ export const GlobalRoutes = {
     path: BEHAVIOR_PATH,
     exact: true,
     component: BehaviourComponent,
+  },
+  TRAIN_THE_TRAINER: {
+    name: "Train The Trainer",
+    path: TRAIN_THE_TRAINER_PATH,
+    exact: true,
+    component: TrainTheTrainerComponent,
   },
 };
 
