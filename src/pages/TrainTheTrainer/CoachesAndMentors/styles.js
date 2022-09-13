@@ -1,0 +1,36 @@
+export const useStyles = (MUITheme) => ({
+mainGridContainer:{
+    maxWidth:1284,
+    margin:"auto",
+    marginTop:100,
+    marginBottom:100
+},
+mainHeader:{
+    fontSize:26,
+    fontWeight:900
+},
+name:{
+    fontSize:22,
+    color:"black",
+    fontWeight:600,
+    textAlign:"center"
+},
+title:{
+    fontSize:17,
+fontStyle:"italic",
+textAlign:"center",
+color:"#535353",
+},
+btn:{
+padding:16,
+background:"#40a5f6",
+color:"black",
+fontSize:18, 
+fontWeight:700,
+borderRadius:50
+},
+cardActions:{
+    justifyContent:"center"
+}
+
+    });
