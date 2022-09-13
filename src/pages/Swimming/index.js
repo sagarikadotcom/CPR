@@ -36,7 +36,7 @@ return(
 <br/>
 <br/>
 <Typography style={{fontSize :16,marginTop:10}}>**Please note: this service at Canaan Pet Resort is not a medical solution, nor is it a substitute for medical rehabilitation. If you have any specific medical questions or concerns about your dog, please contact your veterinarian. 
-Swimming sessions are chargeable at INR 500/- per hour.
+Swimming sessions are chargeable at INR 600/- per hour.
 </Typography>
 
 </div>

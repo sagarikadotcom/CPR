@@ -9,6 +9,7 @@ const Swimming = lazy(() => import("../pages/Swimming"));
 const Pickup = lazy(() => import("../pages/Pickup"));
 const Behavior = lazy(() => import("../pages/Behavior"));
 const TrainTheTrainer = lazy(() => import("../pages/TrainTheTrainer"));
+const Socialization=lazy(() => import("../pages/Events/Socialization"));
 
 
 
@@ -20,6 +21,8 @@ const SwimmingComponent= Swimming
 const PickupComponent= Pickup
 const BehaviourComponent= Behavior
 const TrainTheTrainerComponent= TrainTheTrainer
+const SocializationComponent= Socialization
+
 
 
 
@@ -30,11 +33,7 @@ const SWIMMING_PATH = "/swimming";
 const PICKUP_PATH = "/transport";
 const BEHAVIOR_PATH = "/behavior";
 const TRAIN_THE_TRAINER_PATH = "/train-the-trainer";
-
-
-
-
-
+const SOCIALIZATION_PATH = "/events/Socialization";
 
 
 export const GlobalRoutes = {
@@ -85,6 +84,12 @@ export const GlobalRoutes = {
     path: TRAIN_THE_TRAINER_PATH,
     exact: true,
     component: TrainTheTrainerComponent,
+  },
+  SOCIALIZATION: {
+    name: "Socialization",
+    path: SOCIALIZATION_PATH,
+    exact: true,
+    component: SocializationComponent,
   },
 };
 

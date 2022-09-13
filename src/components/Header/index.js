@@ -20,22 +20,27 @@ const OfflineHeader = (props) => {
 
 const handleTrainTheTrainer=()=>{
 navigate(GlobalRoutes.TRAIN_THE_TRAINER.path);
-
 }
+
+const handleContactUs=()=>{
+  window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe9NRizn3tvX5Hq90up0hcv0l9oeqVHpRRaOvC1YCgB_AZUFg/viewform?usp=sf_link";
+}
+
   return (<>
   <Hidden smUp>
   <AppBar  >
       <Toolbar className={props.classes.eventToolbar} >
        <Typography>Become a certified dog trainer in 15 days!</Typography>
-       <Typography  style={{color:"#01b7ff"}}>(1st July to 15 July)</Typography>
+       <Typography  style={{color:"#01b7ff"}}>(22 Nov - 6 Dec)</Typography>
         </Toolbar>
     </AppBar></Hidden>
     <Hidden  only={"xs"}>
     <AppBar  >
       <Toolbar style={{background:"black", width:"-webkit-fill-available",color:"white", margin:"auto", padding:"0px 75px", display:"flex", justifyContent:"space-between"}} >
       <Typography style={{fontSize:24}}><span ><MdOutlineLocationOn style={{paddingTop:8}}/></span>Bangalore | Events</Typography>
-      <Typography style={{fontSize:24}}>Become a certified dog trainer in 15 days! <span  style={{color:"#01b7ff"}}>(1st July to 15 July)</span></Typography>
-      <Button onClick={handleTrainTheTrainer}className={props.classes.registerNowbtn}>Register Now</Button>
+      <Typography style={{fontSize:24}}>Become a certified dog trainer in 15 days! <span  style={{color:"#01b7ff"}}>(22 Nov - 6 Dec)</span></Typography>
+      <Button className={props.classes.registerNowbtn}>Register Now</Button>
+   
       </Toolbar>
     </AppBar>
     </Hidden>
@@ -74,13 +79,13 @@ navigate(GlobalRoutes.TRAIN_THE_TRAINER.path);
               </Button> */}
               <Button
                  className={props.trigger ?props.classes.hoverBtn:props.classes.btn}
-             onClick={props.scrollToContactUs}
+             onClick={handleContactUs}
               >
               CONTACT US
               </Button>
               </Hidden>
               <Hidden smUp>
-              <Button style={{cursor:"none",cursor:"pointer"}} onClick={handleTrainTheTrainer}
+              <Button style={{cursor:"none",cursor:"pointer"}}
                  className={props.trigger ?props.classes.hoverBtn:props.classes.btn}
                            >
                              <FiPhoneCall style={{marginRight:10}}/>

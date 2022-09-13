@@ -3,7 +3,7 @@ import ExtraBoldFont from "../../assets/fonts/Poppins-ExtraBold.ttf";
 import BoldFont from "../../assets/fonts/Poppins-ExtraBold.ttf";
 import RegularFont from "../../assets/fonts/Poppins-Regular.ttf";
 
-import Banner from "../../assets/Banner.JPG";
+import Banner from "../../assets/images/Enquiry/bg.jpg";
 const poppinsBoldFont = new FontFace("Poppins Bold", `url(${BoldFont})`);
 const poppinsExtraBoldFont = new FontFace("Poppins ExtraBold", `url(${ExtraBoldFont})`);
 const poppinsRegularFont = new FontFace("Poppins Regular", `url(${RegularFont})`);
@@ -232,15 +232,18 @@ export const useStyles = () => ({
     },
   },
   main: {
-    height: "100vh",
+    height: "50vh",
   },
   root: {
-    height: "100vh",
+   marginTop:160,
+   [MUITheme.breakpoints.only("xs")]: {
+   marginTop:50
+  },
+  
   },
   image: {
     background: `linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),url(${Banner}) no-repeat center center`,
-
-    backgroundRepeat: "no-repeat",
+   
     backgroundColor: MUITheme.palette.type === "light" ? MUITheme.palette.grey[50] : MUITheme.palette.grey[900],
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -254,10 +257,11 @@ export const useStyles = () => ({
       height: "427px",
     },
     [MUITheme.breakpoints.only("xs")]: {
-      backgroundSize: "contain",
-      height: "427px",
+      backgroundSize: "cover",
+      height: "50vh",
       position:"relative",
-    background: `url(${Banner}) no-repeat center center`,
+      background: `linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),url(${Banner}) no-repeat center center`,
+marginTop:48
 
 
     },
@@ -329,14 +333,15 @@ export const useStyles = () => ({
     height: "-webkit-fill-available",
   },
   paper: {
-    height: "100vh",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 0,
+    height:"100vh"
   },
   div: {
     maxWidth: 350,
+    margin:"auto"
   },
   actionHeader: {
     textAlign: "center",
@@ -356,9 +361,8 @@ export const useStyles = () => ({
     marginTop: 40,
   },
   buttonContainer: {
-    display: "inline-grid",
+    display: "glex",
     justifyContent: "center",
-    marginTop: 40,
     textAlign: "center",
   },
   arrowDiv: {
@@ -407,11 +411,11 @@ export const useStyles = () => ({
     marginTop: -1,
   },
   paper:{
-    height:700,
-
+    height:"100vh",
     [MUITheme.breakpoints.only("xs")]: {
-     height:200,
-     marginTop:78,
+    height:"100%",
+
+       marginTop:0,
     },
   },
   snippet:{

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import {  useHistory, useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Toolbar from "@material-ui/core/Toolbar";
 import { withStyles } from "@material-ui/styles";
 import { Button, Card, Grid, Hidden, Paper, useScrollTrigger } from "@material-ui/core";
@@ -9,11 +9,12 @@ import Carousel from 'react-material-ui-carousel'
 import { useStyles } from "./styles";
 import { GlobalRoutes } from "../../GlobalRouter/Routes";
 import GoToTop from "../../assets/images/go-top-bt.svg";
-import Header from '../../components/Header'/* 
+import Header from '../../components/Header'
 import Banner from '../../assets/images/corousel/banner.png'
 import Banner1 from '../../assets/images/corousel/banner2.jpg'
 
-import Banner2 from '../../assets/images/corousel/banner3.jpg' */
+import Banner2 from '../../assets/images/corousel/banner3.jpg'
+
 import Offleash from '../../assets/images/FacilityIcons/offleash.png'
 import Clean from '../../assets/images/FacilityIcons/clean.png'
 import CCTV from '../../assets/images/FacilityIcons/cctv.png'
@@ -34,9 +35,8 @@ import Contactus from './Contactus'
 import Footer from "./Footer"
 import { Facebook, Instagram, YouTube } from "@mui/icons-material";
 import Aboutus from './Aboutus'
-import Banner from "../../assets/Banner.JPG"
+import Enquiry from "../Enquiry"
 const Welcome = (props) => {
-  const navigate = useNavigate();
 
   const homeRef = useRef(null);
   const serviceRef = useRef(null);
@@ -50,35 +50,21 @@ const Welcome = (props) => {
   const scrollToContactUs = () => contactUsRef.current.scrollIntoView({ behavior: "smooth" });
 
   let items = [
-  /*  Banner,Banner1,Banner2 */
-  Banner
+   Banner,Banner1,Banner2
 ]
 
 const   Item=(props)=>
 {
     return (
-        <Paper className={props.props.classes.image}>
-         {/*   <img src={props.item} /> */}
+        <Paper className={props.props.classes.paper}style={{height:"40vh"}}>
+           <img src={props.item} style={{width:"100%"}}/>
                   </Paper>
     )
 }
-const handleTrainTheTrainer=()=>{
-  console.log("hello")
-  navigate(GlobalRoutes.TRAIN_THE_TRAINER.path);
-  
-  }
   return (
     <>
     <Header  trigger={trigger} scrollToHome={scrollToHome} scrollToServices={scrollToServices} scrollToAboutUs={scrollToAboutUs} scrollToContactUs={scrollToContactUs}/>
-        
-        <Grid container className={props.classes.image} >
-      
-         <div className={props.classes.btnContainer}>
-       <Button onClick={handleTrainTheTrainer}className={props.classes.registerNowbtn}>Register Now</Button>
-         </div>
-      
-               </Grid>
-
+      <Enquiry/>
        <div style={{margin:"auto", display:"flex", justifyContent:"center"}}ref={homeRef}>
          <img src ={snippet} className={props.classes.snippet}/>
        </div>

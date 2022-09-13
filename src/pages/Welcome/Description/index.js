@@ -24,7 +24,7 @@ const MediaControlCard=()=> {
     <Box sx={{ display: 'flex', flexDirection: 'column',margin:"auto" }}>
     <CardContent sx={{ flex: '1 0 auto' }} style={{textAlign:"center", }}>
           <Typography component="div" variant="h4" style={{fontSize:30, fontWeight:700, marginTop:30}}>
-          WELCOME TO CANAAN PET RESORT
+        
           </Typography>
           <Typography variant="subtitle1" color="text.secondary" component="div" style={{width:"70%", margin:"40px auto"}}>
           Canaan Pet Resort is a safe, stress - free and clean environment for your dog’s boarding and daycare. Located in North Bangalore off Hennur road, we are easily accessible from most parts of Bangalore.

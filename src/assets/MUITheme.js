@@ -4,7 +4,7 @@ export let MUITheme = createTheme({
   overrides: {
     MuiInput: {
       root: {
-        borderBottom: "1px solid #837d90",
+       
       },
       underline: {
         "&&&&:hover:before": {
@@ -16,8 +16,7 @@ export let MUITheme = createTheme({
         "&&&&:before": {
           borderBottom: "none",
         },
-        borderBottom: "1px solid #837d90",
-        "&$error": {
+              "&$error": {
           "&:after": {
             borderBottomColor: "#F3FF00",
           },
@@ -37,6 +36,7 @@ export let MUITheme = createTheme({
         },
       },
     },
+  
     MuiTab: {
       textColorPrimary: {
         "&$disabled": {
@@ -113,42 +113,7 @@ export let MUITheme = createTheme({
         },
       },
     },
-    MuiAutocomplete: {
-      listbox: {
-        background:
-          "linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), linear-gradient(135deg, #0F0426 0%, #080033 100%);",
-      },
-      noOptions: {
-        display: "none",
-        background:
-          "linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)), linear-gradient(135deg, #0F0426 0%, #080033 100%);",
-      },
-      tag: {
-        background: " rgba(255, 255, 255, 0.05)",
-        color: "white",
-      },
-      option: {
-        '&[data-focus="true"]': {
-          background:
-            "linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), linear-gradient(135deg, #0F0426 0%, #080033 100%)",
-        },
-      },
-      inputRoot: {
-        border: "none",
-        padding: 0,
-        '&&[class*="MuiInput-root"]': {
-          padding: 3,
-          paddingRight: 15,
-        },
-      },
-      input: {
-        fontSize: 12,
-        padding: 0,
-      },
-      notchedOutline: {
-        border: "none",
-      },
-    },
+   
     MuiStepConnector: {
       vertical: {
         padding: "0px 0 0px",
@@ -195,21 +160,6 @@ export let MUITheme = createTheme({
       },
     },
 
-    MuiInputBase: {
-      input: {
-        color: "#ffffff",
-        fontSize: 14,
-        "&:hover": {
-          border: "none",
-        },
-        "&$disabled": {
-          color: "#9F9BA8",
-          "&:hover": {
-            cursor: "not-allowed",
-          },
-        },
-      },
-    },
     MuiPickersCalendarHeader: {
       iconButton: {
         backgroundColor: "none",
@@ -218,14 +168,7 @@ export let MUITheme = createTheme({
         color: "#ffffff",
       },
     },
-    MuiFormControlLabel: {
-      label: {
-        "&$disabled": {
-          color: "#9F9BA8",
-          cursor: "not-allowed",
-        },
-      },
-    },
+  
     MuiToolbar: {
       regular: {
         position: "absolute",
@@ -295,6 +238,11 @@ export let MUITheme = createTheme({
         padding: "0.357rem 1.071rem",
       },
     },
+    MuiFormLabel:{
+      root:{
+        color:"black"
+      }
+    },
     MuiSnackbarContent: {
       action: {
         marginLeft: 0,
@@ -328,11 +276,7 @@ export let MUITheme = createTheme({
   },
   palette: {
     types: {
-      dark: {
-        background: {
-          default: "linear-gradient(131.49deg, #0F0426 0%, #080033 100%)",
-        },
-      },
+      
     },
     grey: {
       A2: "#14092A",
@@ -353,19 +297,7 @@ export let MUITheme = createTheme({
       C5: "#150D3D",
       C10: "#201947",
     },
-    text: {
-      primary: "#ffff",
-      secondary: "#ffff",
-      statusRed: "#EF5265",
-      red: "#D0021B",
-      hover: {},
-    },
-    primary: {
-      main: "#ffffff",
-    },
-    secondary: {
-      main: "#FF740F",
-    },
+    
     success: { main: "#49C83E" },
     error: { main: "#F3FF00" },
     infoBoxLink: "#067AD7",
