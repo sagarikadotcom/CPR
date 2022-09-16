@@ -36,7 +36,11 @@ justifyContent:"center"
     color: "#181818",
     fontSize: "2.1875rem",
     fontWeight: 800,
-    textAlign:"center"
+    textAlign:"left",
+    marginBottom:0,
+    [MUITheme.breakpoints.only("xs")]: {
+      textAlign:"center"
+      }
     
 },
 numberGridContainer:{
@@ -113,5 +117,37 @@ masterClassItem:{
 masterClassItemText:{
   fontSize:18,
   fontWeight:600,
+},
+noOneHeaderLogo:{
+  display:"flex", 
+  justifyContent:"left",
+  [MUITheme.breakpoints.only("xs")]: {
+    justifyContent:"center"
+    }
+},
+noOneMainHeader:{
+  fontSize:"1.125rem", fontWeight:700, marginBottom:"1.75em",
+  textAlign:"left",
+  [MUITheme.breakpoints.only("xs")]: {
+    textAlign:"center",
+    }
+},
+noOneDesc:{
+  fontSize:"1.125rem", fontWeight:400, overflowWrap: "break-word", marginBottom:"1.75em",
+  textAlign:"left",
+  [MUITheme.breakpoints.only("xs")]: {
+    textAlign:"center",
+    }
+},
+limitedSeats:{
+  fontStyle:"italic", fontSize:"1.125rem", marginBottom:"1.75em", color:"red", fontWeight:700,
+  textAlign:"left",
+  [MUITheme.breakpoints.only("xs")]: {
+    textAlign:"center",
+    }
+},
+earlyBird:{
+  fontStyle:"italic", fontSize:"1.125rem", marginBottom:"1.75em", color:"#0000ff", fontWeight:700,textAlign:"center"
+  
 }
     });

@@ -12,7 +12,6 @@ const Disclaimer=(props)=>{
                 <Typography className={props.classes.header}>Disclaimer</Typography>
                 <Typography className={props.classes.textItem}><GoPrimitiveDot/> We encourage you to bring your own dog for the workshop for hands-on training sessions, if not possible, Team CPR shall try and provide a dog subject to availability.</Typography>
                 <Typography className={props.classes.textItem}><GoPrimitiveDot/>Course timings are as follows Weekdays: 7:30 AM TO 12: 30 PM and 4:30 pm to 6:30pm Sunday: 8 am to 12:30 pm</Typography>
-                <Typography className={props.classes.textItem}><GoPrimitiveDot/>Course timings are as follows Weekdays: 7:30 AM TO 12: 30 PM and 4:30 pm to 6:30pm Sunday: 8 am to 12:30 pm</Typography>
                 <Typography className={props.classes.textItem}><GoPrimitiveDot/>We will recommend accommodation within 2 kilometers of the venue for candidates outside Bangalore</Typography>
                 <Typography className={props.classes.textItem}><GoPrimitiveDot/> Dress code- K9 Coach t-shirt, track pants, sports shoes and cap. (Dress code must be followed, it is mandatory to wear the K9 t-shirt provided by the team)</Typography>
                 <Typography className={props.classes.textItem}><GoPrimitiveDot/>Applicant must meet the eligibility criteria.</Typography>

@@ -25,13 +25,19 @@ navigate(GlobalRoutes.TRAIN_THE_TRAINER.path);
 const handleContactUs=()=>{
   window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe9NRizn3tvX5Hq90up0hcv0l9oeqVHpRRaOvC1YCgB_AZUFg/viewform?usp=sf_link";
 }
+<Button className={props.classes.registerNowbtn}>Register Now</Button>
+
 
   return (<>
   <Hidden smUp>
   <AppBar  >
       <Toolbar className={props.classes.eventToolbar} >
        <Typography>Become a certified dog trainer in 15 days!</Typography>
+       <div style={{display:"flex", justifyContent:"space-around"}}>
        <Typography  style={{color:"#01b7ff"}}>(22 Nov - 6 Dec)</Typography>
+      <Button className={props.classes.registerNowbtn} style={{fontSize:14, padding:0}} onClick={handleTrainTheTrainer}>Register Now</Button>
+       </div>
+
         </Toolbar>
     </AppBar></Hidden>
     <Hidden  only={"xs"}>
@@ -39,8 +45,7 @@ const handleContactUs=()=>{
       <Toolbar style={{background:"black", width:"-webkit-fill-available",color:"white", margin:"auto", padding:"0px 75px", display:"flex", justifyContent:"space-between"}} >
       <Typography style={{fontSize:24}}><span ><MdOutlineLocationOn style={{paddingTop:8}}/></span>Bangalore | Events</Typography>
       <Typography style={{fontSize:24}}>Become a certified dog trainer in 15 days! <span  style={{color:"#01b7ff"}}>(22 Nov - 6 Dec)</span></Typography>
-      <Button className={props.classes.registerNowbtn}>Register Now</Button>
-   
+      <Button className={props.classes.registerNowbtn} onClick={handleTrainTheTrainer}>Register Now</Button>
       </Toolbar>
     </AppBar>
     </Hidden>

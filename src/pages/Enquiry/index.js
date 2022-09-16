@@ -133,7 +133,7 @@ setSubmitStatus(false)
         </Alert>
       </Snackbar>}
       <Grid container className={props.classes.root}>
-        <Grid item xs={12} sm={12} md={6} className={props.classes.image} >
+        <Grid item xs={12} sm={12} md={12} className={props.classes.image} >
           <div>
 
           <Typography className={props.classes.signUpHeader} style={{color:"white"}}>Welcome</Typography>
@@ -143,7 +143,7 @@ setSubmitStatus(false)
         </Grid>
       
 
-        <Grid item xs={12} sm={12} md={6} className={props.classes.formGrid}>
+      {/*   <Grid item xs={12} sm={12} md={6} className={props.classes.formGrid}>
           <Paper className={props.classes.paper}>
         
     {loader&&
@@ -207,7 +207,7 @@ setSubmitStatus(false)
             
             </div>
           </Paper>
-        </Grid>
+        </Grid> */}
       </Grid>
     </>
   );

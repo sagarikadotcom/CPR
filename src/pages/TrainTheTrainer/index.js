@@ -20,14 +20,21 @@ import CoachesAndMentors from './CoachesAndMentors'
 import SelectionProcess from './SelectionProcess'
 import RegistrationForm from './RegistrationForm'
 import Disclaimer from './Disclaimer'
+import { GlobalRoutes } from '../../GlobalRouter/Routes'
+import {  useNavigate  } from "react-router-dom";
+
 const Training=(props)=>{
+  const navigate = useNavigate();
+  const handelLogoClick=()=>{
+    navigate(GlobalRoutes.WELCOME.path);
+  }
 return(  
 <>
  <div >
    {/* Header Grid */}
    <Grid container className={props.classes.headerGridContainer}>
     <Grid item sm={6} xs={12} className={props.classes.logoGrid}>
-      <img src = {Logo} style={{height:147}}/>
+      <img src = {Logo} onClick={handelLogoClick}style={{height:147}}/>
       </Grid>
       <Grid item sm={6} xs={12} className={props.classes.callUsBtnGrid}>
         <div>
@@ -45,8 +52,13 @@ return( 
                 </div>
                 <h2 className={props.classes.mainHeader} style={{marginBottom:0}}>The #1 Dog Trainer</h2>
                 <h2 className={props.classes.mainHeader} style={{marginTop:0}}>Certification Program in India</h2>
-              <Typography style={{fontSize:"1.125rem", fontWeight:700, marginBottom:"1.75em",textAlign:"center"}}>Highly rated by Alumni and Industry Professionals</Typography>
-              <Typography style={{fontSize:"1.125rem", fontWeight:400, overflowWrap: "break-word", marginBottom:"1.75em",textAlign:"center"}}>With a blend of classroom and hands-on approach, Canaan Pet Resort & K9 Academy has designed a professional canine trainer course taught by globally recognized industry professionals</Typography>  <Typography style={{fontStyle:"italic", fontSize:"1.125rem", marginBottom:"1.75em", color:"red", fontWeight:700,textAlign:"center"}}>Limited seats available, registration on a first come first serve basis</Typography>   <Typography style={{fontStyle:"italic", fontSize:"1.125rem", marginBottom:"1.75em", color:"#0000ff", fontWeight:700,textAlign:"center"}}>Early bird discount of 15% ends on 8th June 2022</Typography>   <div style={{display:"flex", justifyContent:"center"}}>    <Button  style={{background:"#00ABF7", padding:15, borderRadius:30, marginRight:10, fontWeight:800}} >Know More</Button>    <Button style={{background:"#00ABF7", padding:15, borderRadius:30,fontWeight:800}}>Register Now</Button>
+                <Typography className={props.classes.noOneMainHeader}>Highly rated by Alumni and Industry Professionals</Typography>
+              <Typography className={props.classes.noOneDesc}>With a blend of classroom and hands-on approach, Canaan Pet Resort & K9 Academy has designed a professional canine trainer course taught by globally recognized industry professionals</Typography>
+               <Typography className={props.classes.limitedSeats}>Limited seats available, registration on a first come first serve basis</Typography>  
+                <Typography style={{fontStyle:"italic", fontSize:"1.125rem", marginBottom:"1.75em", color:"#0000ff", fontWeight:700,textAlign:"center"}}>Early bird discount of 15% ends on 8th June 2022</Typography>  
+               <div style={{display:"flex", justifyContent:"center"}}>  
+                 <Button  style={{background:"#00ABF7", padding:15, borderRadius:30, marginRight:10, fontWeight:800}} >Know More</Button> 
+                  <Button style={{background:"#00ABF7", padding:15, borderRadius:30,fontWeight:800}}>Register Now</Button>
                </div>
                </Grid>
                <Grid item xs={12} sm={6}>
@@ -64,9 +76,9 @@ return( 
                    <h4 className={props.classes.numnbersH4}> 120+</h4>
                       <h4>Hours of Learning</h4>
                    </Grid>
-                   <Grid item className={props.classes.numbersGridItem}>
-                   <h4 className={props.classes.numnbersH4}>  5+</h4>
-                      <h4>5+ Industry Experts as Coaches</h4>
+                   <Grid item className={props.classes.numbersGridItem} style={{width:"50%"}}>
+                   <h4 className={props.classes.numnbersH4} >  5+</h4>
+                      <h4 >5+ Industry Experts as Coaches</h4>
                    </Grid>
                    <Grid item className={props.classes.numbersGridItem}>
                    <h4 className={props.classes.numnbersH4}> 1000 +</h4>
@@ -181,7 +193,7 @@ Syllabus
 </Grid>
 
 {/* About the Course */}
-<AboutTheCourse/>
+{/* <AboutTheCourse/> */}
 
 {/* Coaches and Mentors */}
 <CoachesAndMentors/>

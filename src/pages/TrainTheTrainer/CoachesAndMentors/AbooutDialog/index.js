@@ -50,7 +50,7 @@ const KumarsDetails=()=>{
         </Typography>
         <br/>
         <Typography>
-        Kumar regularly conducts ‘Train the Trainer’ workshops in Bangalore at his facility and trained 120+ trainers. He has mastered this training over years of experience, practical training, and theoretical learning.  He has worked personally with top trainers in Europe and completed formal courses under various nationally and internationally acclaimed trainers. These include Shirin Merchant, Jeff Riccio, Arnold Kivago, Michael Lee, and currently with Nino Drowaert [STSK9].
+        Kumar regularly conducts ‘Train the Trainer’ workshops in Bangalore at his facility and trained 150+ trainers. He has mastered this training over years of experience, practical training, and theoretical learning.  He has worked personally with top trainers in Europe and completed formal courses under various nationally and internationally acclaimed trainers. These include Shirin Merchant, Jeff Riccio, Arnold Kivago, Michael Lee, and currently with Nino Drowaert [STSK9].
         </Typography>
        
       </DialogContentText>
