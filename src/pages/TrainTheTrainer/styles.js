@@ -47,7 +47,7 @@ numberGridContainer:{
   background:"white", maxWidth:1248, margin:"auto",display:"flex",justifyContent:"space-around"
 },
 numbersGridItem:{
-  textAlign:"center"
+  textAlign:"center",
 },
 numnbersH4:{
   fontSize:24,
@@ -149,5 +149,11 @@ limitedSeats:{
 earlyBird:{
   fontStyle:"italic", fontSize:"1.125rem", marginBottom:"1.75em", color:"#0000ff", fontWeight:700,textAlign:"center"
   
+},
+industryExperts:{
+  textAlign:"center",
+  [MUITheme.breakpoints.only("xs")]: {
+width:"50"
+  }
 }
     });

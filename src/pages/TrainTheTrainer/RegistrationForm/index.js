@@ -1,14 +1,18 @@
-import { Button, Grid, TextField, Typography } from '@material-ui/core';
+import { Button, CircularProgress, Dialog, DialogContent, Grid, TextField, Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
 import React, { useState } from 'react'
 import { useStyles } from './styles';
 import {BsCheckLg} from "react-icons/bs"
 import { send } from 'emailjs-com';
+import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
+
 const RegistrationForm=(props)=>{
     const[name,setName]=useState("")
     const[email,setEmail]=useState("")
     const[number,setNumber]= useState("")
     const[city,setCity]=useState("")
+    const [status,setStatus]= useState(false)
+    const[progress,setProgress]=useState(false)
 
     const handleName=(event)=>{
 setName(event.target.value)
@@ -27,7 +31,8 @@ setName(event.target.value)
     }
      
     const handleSendMessage=()=>{
-        console.log("send message")
+        setStatus(false)
+        setProgress(true)
         send(
             'service_u7xd2on',
             'template_viev20s',
@@ -35,17 +40,31 @@ setName(event.target.value)
             'q33-Ga0FNZ7h3oVIZ'
           )
             .then((response) => {
-              console.log('SUCCESS!', response.status, response.text);
+        setProgress(false)
+              setStatus(true)
             })
             .catch((err) => {
+        setProgress(false)
+
               console.log('FAILED...', err);
             });
     }
     return(
-        <Grid container className={props.classes.mainGridContainer}>
+        <>
+        {progress&&  <Dialog
+        open={true}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogContent>
+        <CircularProgress color="success"  style={{color:"#00ABF7"}}/>
+        </DialogContent>
+         </Dialog>
+   }
+<Grid container className={props.classes.mainGridContainer}>
 <Grid item sm={7} xs ={12} className={props.classes.leftItem}>
 <Grid Container className={props.classes.feesContainer}>
-    <Grid item >
+    <Grid item xs={6} sm={6}>
 <Typography className={props.classes.header}>
 Fees
 </Typography>
@@ -53,12 +72,12 @@ Fees
 ₹ 1,00,000 /-
 </Typography>
     </Grid>
-    <Grid item >
+    <Grid item sm={6} xs={6} >
 <Typography className={props.classes.header}>
 Dates
 </Typography>
 <Typography className={props.classes.subHeader}>
-22 Nov to 6 dec 2022
+22nd Nov to 6th dec 2022
 </Typography>
     </Grid>
 </Grid>
@@ -119,7 +138,19 @@ Three K9 Coach t-shirts and 1 pullover/jacket</Typography>
    
          </Grid>
 </Grid>
+{status?
 <Grid item sm={5} xs ={12} className={props.classes.formContainer}>
+    <div style={{width:"100%", height:"100%", display:"flex", justifyContent:"center"}}>
+    <CheckCircleRoundedIcon style={{fontSize:300,color:"green"}}/>
+   
+    </div>
+    <div style={{width:"100%", height:"100%", display:"flex", justifyContent:"center"}}>
+    <Typography style={{fontSize:17, fontWeight:900}}>Thank you for registering, our team will get back to you.</Typography>
+
+    </div>
+
+</Grid>:
+ <Grid item sm={5} xs ={12} className={props.classes.formContainer}>
    
         <Typography className={props.classes.formHeader}>I’m interested in this programme</Typography>
 <Typography className={props.classes.subHeader}>Fill details and reserve your seat with us.</Typography>
@@ -143,8 +174,10 @@ Three K9 Coach t-shirts and 1 pullover/jacket</Typography>
 <Button variant="contained" className={props.classes.btn} onClick={handleSendMessage}>Send Message</Button>
 
 </div>
+</Grid> }
+
 </Grid>
-</Grid>
+</>
     )
 }
 

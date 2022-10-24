@@ -34,7 +34,7 @@ const handleContactUs=()=>{
       <Toolbar className={props.classes.eventToolbar} >
        <Typography>Become a certified dog trainer in 15 days!</Typography>
        <div style={{display:"flex", justifyContent:"space-around"}}>
-       <Typography  style={{color:"#01b7ff"}}>(22 Nov - 6 Dec)</Typography>
+       <Typography  style={{color:"#01b7ff"}}>(22nd Nov - 6th Dec)</Typography>
       <Button className={props.classes.registerNowbtn} style={{fontSize:14, padding:0}} onClick={handleTrainTheTrainer}>Register Now</Button>
        </div>
 

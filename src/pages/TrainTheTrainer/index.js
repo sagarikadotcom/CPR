@@ -1,5 +1,5 @@
 import { Button, Card, Grid, Typography, useMediaQuery, useScrollTrigger, useTheme } from '@material-ui/core'
-import react, { useEffect } from 'react'
+import react, { useEffect,useRef } from 'react'
 import Header from '../../components/SubHeader'
 import Pet from '../../assets/images/Boarding/pet.jpg'
 import Board from '../../assets/images/Boarding/boarding.jpg'
@@ -25,9 +25,18 @@ import {  useNavigate  } from "react-router-dom";
 
 const Training=(props)=>{
   const navigate = useNavigate();
+  const knowMoreRef = useRef(null);
+  const registerNowRef=useRef(null)
+
+  let trigger = useScrollTrigger({ disableHysteresis: true });
+  const scrollToKnowMore = () => knowMoreRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToRegisterNow = () => registerNowRef.current.scrollIntoView({ behavior: "smooth" });
+
+ 
   const handelLogoClick=()=>{
     navigate(GlobalRoutes.WELCOME.path);
   }
+
 return(  
 <>
  <div >
@@ -55,10 +64,10 @@ return( 
                 <Typography className={props.classes.noOneMainHeader}>Highly rated by Alumni and Industry Professionals</Typography>
               <Typography className={props.classes.noOneDesc}>With a blend of classroom and hands-on approach, Canaan Pet Resort & K9 Academy has designed a professional canine trainer course taught by globally recognized industry professionals</Typography>
                <Typography className={props.classes.limitedSeats}>Limited seats available, registration on a first come first serve basis</Typography>  
-                <Typography style={{fontStyle:"italic", fontSize:"1.125rem", marginBottom:"1.75em", color:"#0000ff", fontWeight:700,textAlign:"center"}}>Early bird discount of 15% ends on 8th June 2022</Typography>  
+                <Typography style={{fontStyle:"italic", fontSize:"1.125rem", marginBottom:"1.75em", color:"#0000ff", fontWeight:700,textAlign:"center"}}>Early bird discount of 15% ends on 10th October 2022</Typography>  
                <div style={{display:"flex", justifyContent:"center"}}>  
-                 <Button  style={{background:"#00ABF7", padding:15, borderRadius:30, marginRight:10, fontWeight:800}} >Know More</Button> 
-                  <Button style={{background:"#00ABF7", padding:15, borderRadius:30,fontWeight:800}}>Register Now</Button>
+                 <Button  style={{background:"#00ABF7", padding:15, borderRadius:30, marginRight:10, fontWeight:800}} onClick={scrollToKnowMore}>Know More</Button> 
+                  <Button style={{background:"#00ABF7", padding:15, borderRadius:30,fontWeight:800}} onClick={scrollToRegisterNow}>Register Now</Button>
                </div>
                </Grid>
                <Grid item xs={12} sm={6}>
@@ -76,7 +85,7 @@ return( 
                    <h4 className={props.classes.numnbersH4}> 120+</h4>
                       <h4>Hours of Learning</h4>
                    </Grid>
-                   <Grid item className={props.classes.numbersGridItem} style={{width:"50%"}}>
+                   <Grid item className={props.classes.industryExperts} >
                    <h4 className={props.classes.numnbersH4} >  5+</h4>
                       <h4 >5+ Industry Experts as Coaches</h4>
                    </Grid>
@@ -85,7 +94,7 @@ return( 
                       <h4>Dogs Trained</h4>
                    </Grid>
                    <Grid item className={props.classes.numbersGridItem}>
-                   <h4 className={props.classes.numnbersH4}> Nov 22 - Dev 6</h4>
+                   <h4 className={props.classes.numnbersH4}> 22nd Nov - 6th Dec</h4>
                       <h4>Dates</h4>
                    </Grid>
                    </Grid>
@@ -147,7 +156,7 @@ return( 
          </Grid>
            {/* Syllabus */}
 
-<Grid container className={props.classes.syllabusGridContainer}>
+<Grid container className={props.classes.syllabusGridContainer}  ref={knowMoreRef}>
 <Grid item sm={6} xs={12}>
   <Typography className={props.classes.syllabusHeader}>
 Syllabus
@@ -202,7 +211,10 @@ Syllabus
 <SelectionProcess/>
 
 {/* RegistrationFrom */}
+<div ref={registerNowRef}>
 <RegistrationForm/>
+
+</div>
 
 {/* Disclaimer */}
 <Disclaimer/>

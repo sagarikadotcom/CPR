@@ -4,9 +4,15 @@ import React, { useState } from "react";
 import Footer from "../../Welcome/Footer";
 import { useStyles } from "./styles";
 import Header from '../../../components/SubHeader'
-import { Button, Card, CircularProgress, Dialog, DialogContent, Grid, Snackbar, TextField, Typography, useMediaQuery, useScrollTrigger, useTheme } from '@material-ui/core'
+import { Box, Button, Card, CircularProgress, Dialog, DialogContent, FormControl, Grid, InputLabel, MenuItem, Select, Snackbar, TextField, Typography, useMediaQuery, useScrollTrigger, useTheme } from '@material-ui/core'
 import axios from "axios";
 import { Alert } from "@mui/material";
+
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' }
+]
 
 
 const Socialization=(props)=>{
@@ -51,6 +57,7 @@ const handleInstaHandle=(event)=>{
 }
 const handleSubmit=()=>{
     setSubmitStatus(false)
+    console.log(name)
     const data={
         Name:name,
         Number:number,
@@ -80,6 +87,7 @@ axios.post("https://sheet.best/api/sheets/f7a009bd-2d75-471a-ac12-e759bdde10ab",
 const handleClose=()=>{
     setSubmitStatus(false)
       }
+    
     return(
         < >
         
@@ -93,6 +101,8 @@ const handleClose=()=>{
 
           
       <Card elevation={2} className={props.classes.card}>
+      <Typography style={{color:"black", fontSize:24, fontWeight:900, display:"flex", justifyContent:"center"}}>Project Socialization</Typography>
+
         <Typography style={{color:"black", fontSize:16, fontWeight:900, display:"flex", justifyContent:"center"}}>Register Now!</Typography>
         {loader&&
     <Dialog
@@ -121,7 +131,7 @@ const handleClose=()=>{
         <TextField id="outlined-basic" placeholder="your Dog's Breed*"variant="outlined"style={{margin:"16px 0px"}} value={DogsBreed} onChange={handleDogsBreed}fullWidth/>
         <TextField id="outlined-basic" placeholder="your Dog's Age*"variant="outlined"style={{margin:"16px 0px"}} value={DogsAge} onChange={handleDogsAge}fullWidth/>
         <TextField id="outlined-basic" placeholder="Instagram handle*"variant="outlined"  style={{margin:"16px 0px"}} value={InstaHandle}onChange={handleInstaHandle}fullWidth/>
-       
+     
                   </Grid>
                   <Grid item sm={12} xs={8} className={props.classes.buttonContainer}>
                                        <Button style={{background:"#01b7ff  0% 0% no-repeat padding-box", width:"100%",borderRadius:"25px"}} onClick={handleSubmit}>
