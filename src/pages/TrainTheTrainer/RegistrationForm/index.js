@@ -69,7 +69,7 @@ setName(event.target.value)
 Fees
 </Typography>
 <Typography className={props.classes.subHeader}>
-₹ 70,000 /-
+₹ 75,000 /-
 </Typography>
     </Grid>
     <Grid item sm={6} xs={6} >
