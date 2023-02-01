@@ -48,7 +48,7 @@ return( 
       <Grid item sm={6} xs={12} className={props.classes.callUsBtnGrid}>
         <div>
           <Button style={{background:"#00ABF7", borderRadius:20}} > 
-          <a href="tel: +91 9938390000" className={props.classes.anchor}>Call Us - +91 99004 20777</a>
+          <a href="tel: +91 8951133804" className={props.classes.anchor}>Call Us - +91 8951133804</a>
           </Button>
           </div>
           </Grid>
@@ -64,7 +64,6 @@ return( 
                 <Typography className={props.classes.noOneMainHeader}>Highly rated by Alumni and Industry Professionals</Typography>
               <Typography className={props.classes.noOneDesc}>With a blend of classroom and hands-on approach, Canaan Pet Resort & K9 Academy has designed a professional canine trainer course taught by globally recognized industry professionals</Typography>
                <Typography className={props.classes.limitedSeats}>Limited seats available, registration on a first come first serve basis</Typography>  
-                <Typography style={{fontStyle:"italic", fontSize:"1.125rem", marginBottom:"1.75em", color:"#0000ff", fontWeight:700,textAlign:"center"}}>Early bird discount of 15% ends on 10th October 2022</Typography>  
                <div style={{display:"flex", justifyContent:"center"}}>  
                  <Button  style={{background:"#00ABF7", padding:15, borderRadius:30, marginRight:10, fontWeight:800}} onClick={scrollToKnowMore}>Know More</Button> 
                   <Button style={{background:"#00ABF7", padding:15, borderRadius:30,fontWeight:800}} onClick={scrollToRegisterNow}>Register Now</Button>
@@ -85,16 +84,13 @@ return( 
                    <h4 className={props.classes.numnbersH4}> 120+</h4>
                       <h4>Hours of Learning</h4>
                    </Grid>
-                   <Grid item className={props.classes.industryExperts} >
-                   <h4 className={props.classes.numnbersH4} >  5+</h4>
-                      <h4 >5+ Industry Experts as Coaches</h4>
-                   </Grid>
+                  
                    <Grid item className={props.classes.numbersGridItem}>
                    <h4 className={props.classes.numnbersH4}> 1000 +</h4>
                       <h4>Dogs Trained</h4>
                    </Grid>
                    <Grid item className={props.classes.numbersGridItem}>
-                   <h4 className={props.classes.numnbersH4}> 22nd Nov - 6th Dec</h4>
+                   <h4 className={props.classes.numnbersH4}> 21st Feb - 2nd Mar</h4>
                       <h4>Dates</h4>
                    </Grid>
                    </Grid>
@@ -107,11 +103,7 @@ return( 
                     Highlights of the Course
                    </Typography>
           <Grid container className={props.classes.listContainer}>
-              <Grid item className={props.classes.lisItem}>
-               <BsCheckLg className={props.classes.tickIcon}/>
-              <Typography>5+ industry experts as Coaches and Mentors</Typography>
-             </Grid> 
-             <Grid item className={props.classes.lisItem}>
+                           <Grid item className={props.classes.lisItem}>
                <BsCheckLg className={props.classes.tickIcon}/>
               <Typography>120+ hours and classroom and practical training</Typography>
              </Grid>       
@@ -121,11 +113,8 @@ return( 
              </Grid>       <Grid item className={props.classes.lisItem}>
                <BsCheckLg className={props.classes.tickIcon}/>
               <Typography>Part of the CANAAN K9 Coach community for future assistance</Typography>
-             </Grid>       <Grid item className={props.classes.lisItem}>
-               <BsCheckLg className={props.classes.tickIcon}/>
-              <Typography>25% scholarship assistance to best performers post the certification point</Typography>
-             </Grid>                        
-         </Grid>
+             </Grid>   
+             </Grid>
 
         </Grid>
         <Grid item sm={6} xs={12}>
@@ -169,7 +158,7 @@ Syllabus
 </Grid>
 
 {/* Master class details */}
-<Grid style={{background:"#E9E9E9"}}>
+{/* <Grid style={{background:"#E9E9E9"}}>
 
 <Grid container className={props.classes.masterClassContainer}>
 <Typography className={props.classes.masterClassHeader}>Masterclass by Industry Experts
@@ -199,7 +188,7 @@ Syllabus
          </Grid>
 
         </Grid>
-</Grid>
+</Grid> */}
 
 {/* About the Course */}
 {/* <AboutTheCourse/> */}

@@ -90,14 +90,14 @@ const handleTrainTheTrainer=()=>{
     <AppBar  >
         <Toolbar className={props.classes.eventToolbar} >
          <Typography>Become a certified dog trainer in 15 days!</Typography>
-         <Typography  style={{color:"#01b7ff"}}>(22 Nov - 6 Dec)</Typography>
+         <Typography  style={{color:"#01b7ff"}}>(21 Feb - 2 Mar)</Typography>
           </Toolbar>
       </AppBar></Hidden>
       <Hidden  only={"xs"}>
       <AppBar  >
         <Toolbar style={{background:"black", width:"-webkit-fill-available",color:"white", margin:"auto", padding:"0px 75px", display:"flex", justifyContent:"space-between"}} >
         <Typography style={{fontSize:24}}><span ><MdOutlineLocationOn style={{paddingTop:8}}/></span>Bangalore | Events</Typography>
-        <Typography style={{fontSize:24}}>Become a certified dog trainer in 15 days! <span  style={{color:"#01b7ff"}}>(22 Nov - 6 Dec)</span></Typography>
+        <Typography style={{fontSize:24}}>Become a certified dog trainer in 15 days! <span  style={{color:"#01b7ff"}}>(21 Feb - 2 Mar)</span></Typography>
         <Button className={props.classes.registerNowbtn}>Register Now</Button>
  </Toolbar>
       </AppBar>

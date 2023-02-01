@@ -69,7 +69,7 @@ setName(event.target.value)
 Fees
 </Typography>
 <Typography className={props.classes.subHeader}>
-₹ 1,00,000 /-
+₹ 70,000 /-
 </Typography>
     </Grid>
     <Grid item sm={6} xs={6} >
@@ -77,7 +77,7 @@ Fees
 Dates
 </Typography>
 <Typography className={props.classes.subHeader}>
-22nd Nov to 6th dec 2022
+21st Feb to 2nd Mar 2023
 </Typography>
     </Grid>
 </Grid>
