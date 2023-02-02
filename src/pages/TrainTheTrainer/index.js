@@ -14,7 +14,7 @@ import TTT from "../../assets/images/TTT.png"
 import {BsCheckLg} from "react-icons/bs"
 import { AiOutlinePropertySafety } from 'react-icons/ai'
 import CollasableList from './CollapsableList'
-import CertifiedinfifteenDays from '../../assets/images/CertifiedinfifteenDays.jpg'
+import CertifiedinTenDays from '../../assets/images/CertifiedinTenDays.png'
 import AboutTheCourse from './AboutTheCourse'
 import CoachesAndMentors from './CoachesAndMentors'
 import SelectionProcess from './SelectionProcess'
@@ -48,7 +48,7 @@ return( 
       <Grid item sm={6} xs={12} className={props.classes.callUsBtnGrid}>
         <div>
           <Button style={{background:"#00ABF7", borderRadius:20}} > 
-          <a href="tel: +91 8951133804" className={props.classes.anchor}>Call Us - +91 8951133804</a>
+          <a href="tel: +91 9900420777" className={props.classes.anchor}>Call Us - +91 9900420777</a>
           </Button>
           </div>
           </Grid>
@@ -77,11 +77,11 @@ return( 
                  <div style={{ background:"#00ABF7",  padding:20}}>
                    <Grid container className={props.classes.numberGridContainer}>
                    <Grid item className={props.classes.numbersGridItem}>
-                      <h4 className={props.classes.numnbersH4}> 150+</h4>
+                      <h4 className={props.classes.numnbersH4}> 180+</h4>
                       <h4>Trainers certified</h4>
                    </Grid>
                    <Grid item className={props.classes.numbersGridItem}>
-                   <h4 className={props.classes.numnbersH4}> 120+</h4>
+                   <h4 className={props.classes.numnbersH4}> 70+</h4>
                       <h4>Hours of Learning</h4>
                    </Grid>
                   
@@ -105,7 +105,7 @@ return( 
           <Grid container className={props.classes.listContainer}>
                            <Grid item className={props.classes.lisItem}>
                <BsCheckLg className={props.classes.tickIcon}/>
-              <Typography>120+ hours and classroom and practical training</Typography>
+              <Typography>70+ hours and classroom and practical training</Typography>
              </Grid>       
              <Grid item className={props.classes.lisItem}>
                <BsCheckLg className={props.classes.tickIcon}/>
@@ -153,7 +153,7 @@ Syllabus
   <CollasableList/>
 </Grid>
 <Grid item sm={6} xs={12}>
-<img src={CertifiedinfifteenDays} className={props.classes.syllausuImg}/>
+<img src={CertifiedinTenDays} className={props.classes.syllausuImg}/>
 </Grid>
 </Grid>
 
@@ -197,7 +197,7 @@ Syllabus
 <CoachesAndMentors/>
 
 {/* selection process */}
-<SelectionProcess/>
+{/* <SelectionProcess/> */}
 
 {/* RegistrationFrom */}
 <div ref={registerNowRef}>

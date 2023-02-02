@@ -69,7 +69,7 @@ setName(event.target.value)
 Fees
 </Typography>
 <Typography className={props.classes.subHeader}>
-₹ 75,000 /-
+₹ 70,000 /-
 </Typography>
     </Grid>
     <Grid item sm={6} xs={6} >
@@ -91,7 +91,7 @@ Dates
                <BsCheckLg className={props.classes.tickIcon}/>
               <Typography className={props.classes.list}>
 
-              120+ hours of classroom and hands-on training</Typography>
+              70+ hours of classroom and hands-on training</Typography>
              </Grid> 
              <Grid item className={props.classes.lisItem}>
                <BsCheckLg className={props.classes.tickIcon}/>
@@ -103,11 +103,7 @@ Dates
                <BsCheckLg className={props.classes.tickIcon}/>
               <Typography className={props.classes.list}>
               Hands-on assignments on site</Typography>
-             </Grid>    
-             <Grid item className={props.classes.lisItem}>
-               <BsCheckLg className={props.classes.tickIcon}/>
-              <Typography className={props.classes.list}>Industry experts as mentors</Typography>
-             </Grid>        
+             </Grid>         
              <Grid item className={props.classes.lisItem}>
                <BsCheckLg className={props.classes.tickIcon}/>
               <Typography className={props.classes.list}>
@@ -130,7 +126,7 @@ Join the ‘CANAAN K9 Coach" family
              <Grid item className={props.classes.lisItem}>
                <BsCheckLg className={props.classes.tickIcon}/>
               <Typography className={props.classes.list}>
-Three K9 Coach t-shirts and 1 pullover/jacket</Typography>
+Two K9 Coach t-shirts</Typography>
              </Grid>                  
          </Grid>
 

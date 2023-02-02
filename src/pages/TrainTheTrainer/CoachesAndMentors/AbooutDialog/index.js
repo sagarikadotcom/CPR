@@ -42,15 +42,15 @@ const KumarsDetails=()=>{
     <DialogContent>
       <DialogContentText id="alert-dialog-slide-description">
         <Typography  >
-        Mr. Kumar has been actively involved in the pet industry for the last 15 years and is an accomplished trainer who has participated in the IGP dog sports competition in Europe with  his Belgian Malinois – Cairo (The only IGP1 dog in South India).
+        Mr. Kumar has been actively involved in the pet industry for the last 15 years and is an accomplished trainer who has participated in the IGP dog sports competition in Europe with  his Belgian Malinois – Cairo (The only IGP1 dog in South India) and PDC and PSA1 dog sports competetion. 
         </Typography>
         <br/>
         <Typography>
-        Canaan Pet Resort & K9 Academy was established in 2010 by him, to provide the best boarding and training facility to all pets. Kumar specializes in obedience training through positive reinforcement, resolving fear & aggression issues, and has trained 500+ dogs.
+        Canaan Pet Resort & K9 Academy was established in 2010 by him, to provide the best boarding and training facility to all pets. Kumar specializes in obedience training through positive reinforcement, resolving fear & aggression issues, and has trained 1000+ dogs.
         </Typography>
         <br/>
         <Typography>
-        Kumar regularly conducts ‘Train the Trainer’ workshops in Bangalore at his facility and trained 150+ trainers. He has mastered this training over years of experience, practical training, and theoretical learning.  He has worked personally with top trainers in Europe and completed formal courses under various nationally and internationally acclaimed trainers. These include Shirin Merchant, Jeff Riccio, Arnold Kivago, Michael Lee, and currently with Nino Drowaert [STSK9].
+        Kumar regularly conducts ‘Advanced dog training’ workshops in Bangalore at his facility and trained 180+ trainers. He has mastered this training over years of experience, practical training, and theoretical learning.  He has worked personally with top trainers in Europe and completed formal courses under various nationally and internationally acclaimed trainers. These include Shirin Merchant, Jeff Riccio, Arnold Kivago, Michael Lee, and currently with Nino Drowaert [STSK9].
         </Typography>
        
       </DialogContentText>

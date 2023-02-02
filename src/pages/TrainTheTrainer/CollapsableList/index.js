@@ -463,12 +463,7 @@ setOpenAssessDog(!openAssessDog)
               <GoPrimitiveDot />
             </ListItemIcon>
         <Typography style={{fontSize:17}}>Retrieve different objects</Typography>
-   </ListItemButton><ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <GoPrimitiveDot />
-            </ListItemIcon>
-        <Typography style={{fontSize:17}}>Nose work [finding articles, article indication]</Typography>
-   </ListItemButton><ListItemButton sx={{ pl: 4 }}>
+     </ListItemButton><ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
               <GoPrimitiveDot />
             </ListItemIcon>
@@ -582,7 +577,7 @@ setOpenAssessDog(!openAssessDog)
           <FaPlus style={openDemo? {color:"white"}:{color:"black"}} />
         </ListItemIcon>
         <div style={{width:"100%"}}>
-        <Typography style={{fontSize:17, fontWeight:700 }}>Demo: IGP Dog Training with obedience, protection, tracking.</Typography>
+        <Typography style={{fontSize:17, fontWeight:700 }}>Different dog sports obedience format.</Typography>
 
         </div>
        {/*  <ListItemText  primary="How do dogs learn."   sx={{ fontWeight: 'bold',}} /> */}
@@ -594,19 +589,25 @@ setOpenAssessDog(!openAssessDog)
             <ListItemIcon>
               <GoPrimitiveDot />
             </ListItemIcon>
-        <Typography style={{fontSize:17}}>Live demo with Cairo (IGP 1 Title  Holder)</Typography>
+        <Typography style={{fontSize:17}}>IGP Obedience fromat</Typography>
+   </ListItemButton>
+   <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <GoPrimitiveDot />
+            </ListItemIcon>
+        <Typography style={{fontSize:17}}>PDC Obedience format</Typography>
+   </ListItemButton>
+   <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <GoPrimitiveDot />
+            </ListItemIcon>
+        <Typography style={{fontSize:17}}>PSA Obedience format</Typography>
    </ListItemButton>
    <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
               <GoPrimitiveDot />
             </ListItemIcon>
         <Typography style={{fontSize:17}}>Agility sports in India</Typography>
-   </ListItemButton>
-   <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <GoPrimitiveDot />
-            </ListItemIcon>
-        <Typography style={{fontSize:17}}>Career in Agility Sports</Typography>
    </ListItemButton>
   </List>
       </Collapse>

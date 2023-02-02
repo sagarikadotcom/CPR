@@ -40,7 +40,7 @@ return( 
           Mr. KUMAR R
           </Typography>
           <Typography variant="body2" color="text.secondary" className={props.classes.title}>
-            IGP1
+            IGP1, PDC and PSA
             </Typography>
             <Typography variant="body2" color="text.secondary" className={props.classes.title}>
             Head Trainer for the Program.
