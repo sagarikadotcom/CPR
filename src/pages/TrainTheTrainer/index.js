@@ -90,7 +90,7 @@ return( 
                       <h4>Dogs Trained</h4>
                    </Grid>
                    <Grid item className={props.classes.numbersGridItem}>
-                   <h4 className={props.classes.numnbersH4}> 21st Feb - 2nd Mar</h4>
+                   <h4 className={props.classes.numnbersH4}> 22nd Feb - 3rd Mar</h4>
                       <h4>Dates</h4>
                    </Grid>
                    </Grid>

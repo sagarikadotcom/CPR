@@ -77,7 +77,7 @@ Fees
 Dates
 </Typography>
 <Typography className={props.classes.subHeader}>
-21st Feb to 2nd Mar 2023
+22nd Feb to 3rd Mar 2023
 </Typography>
     </Grid>
 </Grid>

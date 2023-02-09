@@ -42,7 +42,7 @@ const KumarsDetails=()=>{
     <DialogContent>
       <DialogContentText id="alert-dialog-slide-description">
         <Typography  >
-        Mr. Kumar has been actively involved in the pet industry for the last 15 years and is an accomplished trainer who has participated in the IGP dog sports competition in Europe with  his Belgian Malinois – Cairo (The only IGP1 dog in South India) and PDC and PSA1 dog sports competetion. 
+        Mr. Kumar has been actively involved in the pet industry for the last 15 years and is an accomplished trainer who has participated in the IGP dog sports competition in Europe with  his Belgian Malinois – Cairo (The only IGP1 dog in South India) and PDC in PSA dog sports competetion. 
         </Typography>
         <br/>
         <Typography>

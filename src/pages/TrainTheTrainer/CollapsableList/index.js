@@ -591,13 +591,7 @@ setOpenAssessDog(!openAssessDog)
             </ListItemIcon>
         <Typography style={{fontSize:17}}>IGP Obedience fromat</Typography>
    </ListItemButton>
-   <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <GoPrimitiveDot />
-            </ListItemIcon>
-        <Typography style={{fontSize:17}}>PDC Obedience format</Typography>
-   </ListItemButton>
-   <ListItemButton sx={{ pl: 4 }}>
+     <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
               <GoPrimitiveDot />
             </ListItemIcon>
