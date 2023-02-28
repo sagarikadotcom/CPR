@@ -29,7 +29,7 @@ const handleContactUs=()=>{
 
 
   return (<>
-  <Hidden smUp>
+{/*   <Hidden smUp>
   <AppBar  >
       <Toolbar className={props.classes.eventToolbar} >
        <Typography>Become a certified dog trainer in 10 days!</Typography>
@@ -48,7 +48,7 @@ const handleContactUs=()=>{
       <Button className={props.classes.registerNowbtn} onClick={handleTrainTheTrainer}>Register Now</Button>
       </Toolbar>
     </AppBar>
-    </Hidden>
+    </Hidden> */}
    
     <AppBar
       classes={{ root: props.trigger ? props.classes.triggeredRoot : props.classes.appBarRoot }}

@@ -3,7 +3,7 @@ import { withStyles } from "@material-ui/styles";
 import React, { useState } from "react";
 import Footer from "../../Welcome/Footer";
 import { useStyles } from "./styles";
-import Header from '../../../components/SubHeader'
+import Header from '../../../components/Header'
 import { Box, Button, Card, CircularProgress, Dialog, DialogContent, FormControl, Grid, InputLabel, MenuItem, Select, Snackbar, TextField, Typography, useMediaQuery, useScrollTrigger, useTheme } from '@material-ui/core'
 import axios from "axios";
 import { Alert } from "@mui/material";
@@ -97,10 +97,10 @@ const handleClose=()=>{
         </Alert>
       </Snackbar>}
            
-             <Header trigger={trigger}/>
+             <Header/>
 
           
-      <Card elevation={2} className={props.classes.card}>
+      <Card elevation={2} className={props.classes.card} style={{marginTop:66}}>
       <Typography style={{color:"black", fontSize:24, fontWeight:900, display:"flex", justifyContent:"center"}}>Project Socialization</Typography>
 
         <Typography style={{color:"black", fontSize:16, fontWeight:900, display:"flex", justifyContent:"center"}}>Register Now!</Typography>

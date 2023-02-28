@@ -2,12 +2,11 @@ export const useStyles = (MUITheme) => ({
     appBarRoot: {
       height: 110,
       padding: "1.714rem",
-      marginTop:63,
+      /* marginTop:63, */
       background: "white",
       [MUITheme.breakpoints.only("xs")]: {
         padding: 12,
         height: "66px",
-        marginTop:56
       },
     },
     triggeredRoot: {

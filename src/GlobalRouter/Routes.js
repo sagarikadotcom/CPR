@@ -10,6 +10,8 @@ const Pickup = lazy(() => import("../pages/Pickup"));
 const Behavior = lazy(() => import("../pages/Behavior"));
 const TrainTheTrainer = lazy(() => import("../pages/TrainTheTrainer"));
 const Socialization=lazy(() => import("../pages/Events/Socialization"));
+const SocializationEvent=lazy(() => import("../pages/SocializationEvent"));
+
 
 
 
@@ -22,6 +24,7 @@ const PickupComponent= Pickup
 const BehaviourComponent= Behavior
 const TrainTheTrainerComponent= TrainTheTrainer
 const SocializationComponent= Socialization
+const SocializationEventComponent=SocializationEvent
 
 
 
@@ -34,6 +37,7 @@ const PICKUP_PATH = "/transport";
 const BEHAVIOR_PATH = "/behavior";
 const TRAIN_THE_TRAINER_PATH = "/train-the-trainer";
 const SOCIALIZATION_PATH = "/events/Socialization";
+const SOCIALIZATION_EVENT_PATH= "/Socialization"
 
 
 export const GlobalRoutes = {
@@ -90,6 +94,12 @@ export const GlobalRoutes = {
     path: SOCIALIZATION_PATH,
     exact: true,
     component: SocializationComponent,
+  },
+  SOCIALIZATION_EVENT: {
+    name: "Socialization Event",
+    path: SOCIALIZATION_EVENT_PATH,
+    exact: true,
+    component: SocializationEventComponent,
   },
 };
 
